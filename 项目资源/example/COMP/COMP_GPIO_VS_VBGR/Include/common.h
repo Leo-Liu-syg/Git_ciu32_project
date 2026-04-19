@@ -25,12 +25,12 @@ extern "C" {
 
 /*-------------------------------------------define---------------------------------------------*/
 /* LED1∂®“Â */
-#define LED1_GPIO_PORT            GPIOB
-#define LED1_PIN                  GPIO_PIN_14
+#define LED_RED_GPIO_PORT            GPIOB
+#define LED_RED_PIN                  GPIO_PIN_14
     
-#define LED1_ON()                 std_gpio_reset_pin(LED1_GPIO_PORT, LED1_PIN)
-#define LED1_OFF()                std_gpio_set_pin(LED1_GPIO_PORT, LED1_PIN)
-#define LED1_TOGGLE()             std_gpio_toggle_pin(LED1_GPIO_PORT, LED1_PIN)
+#define LED1_ON()                 std_gpio_reset_pin(LED_RED_GPIO_PORT, LED_RED_PIN)
+#define LED1_OFF()                std_gpio_set_pin(LED_RED_GPIO_PORT, LED_RED_PIN)
+#define LED_RED_FLIP()             std_gpio_toggle_pin(LED_RED_GPIO_PORT, LED_RED_PIN)
 
 /*-------------------------------------------functions------------------------------------------*/
 void system_clock_config(void);

@@ -29,7 +29,7 @@ int main(void)
 
     while(1)
     {
-        LED1_TOGGLE();
+        LED_RED_FLIP();
         std_delayms(300);
     }
 }

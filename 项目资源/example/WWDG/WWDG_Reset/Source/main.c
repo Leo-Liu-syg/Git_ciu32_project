@@ -39,7 +39,7 @@ int main(void)
     while(1)
     {
         /* ·­×ªLED1×´Ì¬ */
-        LED1_TOGGLE();
+        LED_RED_FLIP();
 
         std_delayms(delay);
 

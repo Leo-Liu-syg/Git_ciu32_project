@@ -45,7 +45,7 @@ int main(void)
         if(g_interrupt_status == 0x01)
         {
             /* LED1иак╦ */
-            LED1_TOGGLE();
+            LED_RED_FLIP();
             std_delayms(300); 
         }
     }

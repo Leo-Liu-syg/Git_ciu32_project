@@ -38,7 +38,7 @@ int main(void)
         /* 每按一次按键触发EXTI中断，LED1切换一次亮灭 */
         if (g_exti_gpio_flag == 1)
         {
-            LED1_TOGGLE();
+            LED_RED_FLIP();
             g_exti_gpio_flag = 0;
         }
     } 

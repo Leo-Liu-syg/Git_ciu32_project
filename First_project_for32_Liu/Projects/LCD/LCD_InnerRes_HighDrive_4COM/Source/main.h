@@ -3,5 +3,11 @@
 
 #include "ciu32l051_std.h"
 #include "stdio.h"
+#include "ssc.h"
+#include "LED.h"
+#include "timer8.h"
+#include "nivc.h"
+
+
 
 #endif /* __MAIN_H */

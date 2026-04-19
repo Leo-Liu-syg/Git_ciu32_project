@@ -41,11 +41,11 @@ void led_init(void)
     std_rcc_gpio_clk_enable(RCC_PERIPH_CLK_GPIOB);
     
     /* 初始化LED1 GPIO */
-    led_gpio_init.pin = LED1_PIN;
+    led_gpio_init.pin = LED_RED_PIN;
     led_gpio_init.mode = GPIO_MODE_OUTPUT;
     led_gpio_init.output_type = GPIO_OUTPUT_PUSHPULL;
     led_gpio_init.pull = GPIO_PULLUP;
-    std_gpio_init(LED1_GPIO_PORT, &led_gpio_init); 
+    std_gpio_init(LED_RED_GPIO_PORT, &led_gpio_init); 
 
     /* 打开LED1 */
     LED1_ON();

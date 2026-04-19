@@ -135,11 +135,11 @@ void gpio_init(void)
     std_gpio_init(GPIOA, &adc_gpio_config);
     
     /* LED1初始化 PB14 */
-    led_gpio_config.pin = LED1_PIN;
+    led_gpio_config.pin = LED_RED_PIN;
     led_gpio_config.mode = GPIO_MODE_OUTPUT;
     led_gpio_config.output_type = GPIO_OUTPUT_PUSHPULL;
     led_gpio_config.pull = GPIO_PULLUP;
-    std_gpio_init(LED1_GPIO_PORT, &led_gpio_config);
+    std_gpio_init(LED_RED_GPIO_PORT, &led_gpio_config);
     /* 初始化设置LED1常灭 */
     LED1_OFF() ;
 }

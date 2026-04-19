@@ -384,14 +384,14 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
-              <FileName>gpio.c</FileName>
+              <FileName>LED.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Source\gpio.c</FilePath>
+              <FilePath>..\Source\LED.c</FilePath>
             </File>
             <File>
-              <FileName>gpio.h</FileName>
+              <FileName>LED.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Source\gpio.h</FilePath>
+              <FilePath>..\Source\LED.h</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>
@@ -404,94 +404,34 @@
               <FilePath>..\Source\main.h</FilePath>
             </File>
             <File>
-              <FileName>time.c</FileName>
+              <FileName>ssc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Source\time.c</FilePath>
+              <FilePath>..\Source\ssc.c</FilePath>
             </File>
             <File>
-              <FileName>time.h</FileName>
+              <FileName>ssc.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Source\time.h</FilePath>
+              <FilePath>..\Source\ssc.h</FilePath>
             </File>
             <File>
-              <FileName>adc.c</FileName>
+              <FileName>nivc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Source\adc.c</FilePath>
+              <FilePath>..\Source\nivc.c</FilePath>
             </File>
             <File>
-              <FileName>adc.h</FileName>
+              <FileName>nivc.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Source\adc.h</FilePath>
+              <FilePath>..\Source\nivc.h</FilePath>
             </File>
             <File>
-              <FileName>app.c</FileName>
+              <FileName>timer8.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Source\app.c</FilePath>
+              <FilePath>..\Source\timer8.c</FilePath>
             </File>
             <File>
-              <FileName>app.h</FileName>
+              <FileName>timer8.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\Source\app.h</FilePath>
-            </File>
-            <File>
-              <FileName>flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>flash.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Source\flash.h</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>i2c.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Source\i2c.h</FilePath>
-            </File>
-            <File>
-              <FileName>lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\lcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>lcd.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Source\lcd.h</FilePath>
-            </File>
-            <File>
-              <FileName>led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\led.c</FilePath>
-            </File>
-            <File>
-              <FileName>led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Source\led.h</FilePath>
-            </File>
-            <File>
-              <FileName>uart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\uart.c</FilePath>
-            </File>
-            <File>
-              <FileName>uart.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Source\uart.h</FilePath>
-            </File>
-            <File>
-              <FileName>voice.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\voice.c</FilePath>
-            </File>
-            <File>
-              <FileName>voice.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Source\voice.h</FilePath>
+              <FilePath>..\Source\timer8.h</FilePath>
             </File>
           </Files>
         </Group>

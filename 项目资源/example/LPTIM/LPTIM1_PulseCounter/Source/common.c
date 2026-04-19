@@ -42,7 +42,7 @@ void gpio_init(void)
     std_rcc_gpio_clk_enable(RCC_PERIPH_CLK_GPIOB);
     
     /* ≥ı ºªØLED1 GPIO */
-    led_gpio_config.pin = LED1_PIN;
+    led_gpio_config.pin = LED_RED_PIN;
     led_gpio_config.mode = GPIO_MODE_OUTPUT;
     led_gpio_config.pull = GPIO_PULLUP;
     led_gpio_config.output_type = GPIO_OUTPUT_PUSHPULL;

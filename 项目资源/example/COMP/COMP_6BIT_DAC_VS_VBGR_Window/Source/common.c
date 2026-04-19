@@ -186,11 +186,11 @@ void gpio_init(void)
     std_gpio_init(GPIOA, &vrefp_gpio_config);
 
     /* LED1³õÊ¼»¯ */
-    led_gpio_config.pin = LED1_PIN;
+    led_gpio_config.pin = LED_RED_PIN;
     led_gpio_config.mode = GPIO_MODE_OUTPUT;
     led_gpio_config.output_type = GPIO_OUTPUT_PUSHPULL;
     led_gpio_config.pull = GPIO_PULLUP;
-    std_gpio_init(LED1_GPIO_PORT, &led_gpio_config);
+    std_gpio_init(LED_RED_GPIO_PORT, &led_gpio_config);
     
     /* Ï¨ÃðLED1 */
     LED1_OFF();

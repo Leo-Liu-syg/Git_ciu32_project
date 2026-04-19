@@ -177,13 +177,13 @@ void led_init(void)
     std_rcc_gpio_clk_enable(RCC_PERIPH_CLK_GPIOB);
 
     /* ≈‰÷√LED1µƒIO */
-    led_gpio_config.pin = LED1_PIN;
+    led_gpio_config.pin = LED_RED_PIN;
     led_gpio_config.mode = GPIO_MODE_OUTPUT;
     led_gpio_config.output_type = GPIO_OUTPUT_PUSHPULL;
     led_gpio_config.pull = GPIO_PULLUP;
 
     /* ≥ı ºªØGPIO */
-    std_gpio_init(LED1_GPIO_PORT, &led_gpio_config);
+    std_gpio_init(LED_RED_GPIO_PORT, &led_gpio_config);
 
     /* œ®√LED1 */
     LED1_OFF();

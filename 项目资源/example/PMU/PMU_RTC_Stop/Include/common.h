@@ -28,10 +28,10 @@ extern "C" {
 
 /*-------------------------------------------define---------------------------------------------*/
 #define LED_GPIO_PORT                     GPIOB
-#define LED1_PIN                          GPIO_PIN_14
+#define LED_RED_PIN                          GPIO_PIN_14
     
-#define LED1_ON()                         std_gpio_reset_pin(LED_GPIO_PORT, LED1_PIN)    
-#define LED1_OFF()                        std_gpio_set_pin(LED_GPIO_PORT, LED1_PIN)
+#define LED1_ON()                         std_gpio_reset_pin(LED_GPIO_PORT, LED_RED_PIN)    
+#define LED1_OFF()                        std_gpio_set_pin(LED_GPIO_PORT, LED_RED_PIN)
 
 #define BUTTON_USER_GPIO                  GPIOC
 #define BUTTON_USER_PIN                   GPIO_PIN_13

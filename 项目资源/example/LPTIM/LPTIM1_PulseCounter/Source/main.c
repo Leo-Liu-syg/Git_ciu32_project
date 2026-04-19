@@ -50,7 +50,7 @@ int main(void)
     {
         /* LED1иак╦ */
         std_delayms(200);
-        LED1_TOGGLE();
+        LED_RED_FLIP();
     }
 }
 

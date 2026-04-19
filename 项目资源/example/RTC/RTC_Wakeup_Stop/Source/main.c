@@ -74,7 +74,7 @@ int main(void)
         if(g_wut_2hz_flag)
         {
             /* LED1иак╦ */
-            LED1_TOGGLE();
+            LED_RED_FLIP();
             
             g_wut_2hz_flag = 0;
         }

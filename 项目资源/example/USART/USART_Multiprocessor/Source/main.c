@@ -67,7 +67,7 @@ int main(void)
         }
         if(!std_usart_get_flag(USART1, USART_FLAG_RWU))
         {
-            LED1_TOGGLE();
+            LED_RED_FLIP();
             std_delayms(300);            
         } 
         else
