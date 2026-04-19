@@ -1,0 +1,41 @@
+/************************************************************************************************/
+/**
+* @file               rtc_bsp.h
+* @author             MCU Ecosystem Development Team
+* @brief              RTC BSP头文件
+*                           
+*
+**************************************************************************************************
+* @attention
+* Copyright (c) CEC Huada Electronic Design Co.,Ltd. All rights reserved.
+*
+**************************************************************************************************
+*/
+
+/* 避免头文件重复引用 */
+#ifndef RTC_BSP_H
+#define RTC_BSP_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/*------------------------------------------includes--------------------------------------------*/
+#include <stdio.h>
+#include "ciu32l051_std.h"
+
+/*--------------------------------------------variables-----------------------------------------*/
+extern __IO uint8_t g_alarm_flag;
+#define TIMES_TO_GET_TR      (0x03)     
+    
+/*------------------------------------------functions-------------------------------------------*/
+void RTC_TAMP_IRQHandler(void);
+void bsp_rtc_datetime_config(void);
+void bsp_rtc_alarm_config(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* RTC_BSP_H */
+
