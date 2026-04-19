@@ -25,7 +25,6 @@ void TIM8_init(void)
  * @brief  TIM8中断服务程序
  * @retval 无
  */
-
 unsigned char tim8_500ms_count = 0; // 定义一个计数器变量，用于计数TIM8更新事件的发生次数
 unsigned char tim8_500ms_flag = 0; // 定义一个标志变量，用于指示TIM8更新事件发生
 void TIM8_IRQHandler(void)
@@ -40,7 +39,7 @@ void TIM8_IRQHandler(void)
             tim8_500ms_flag = 1; // 设置标志变量，表示TIM8更新事件发生
         }
 
-        
+
         std_tim_clear_flag(TIM8, TIM_FLAG_UPDATE);
         /* TIM8处理定时中断 */
     }

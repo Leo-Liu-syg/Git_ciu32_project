@@ -5,6 +5,7 @@ int main(void)
     /*????*/
     system_clock_config();
     std_delay_init();
+    gpio_init();
 
     /*LED*/
     led_init();
@@ -12,6 +13,12 @@ int main(void)
     TIM8_init();      // ?????
     bsp_tim8_start(); // ?????
     nvic_init();         // NVIC??
+
+    /* LCD */
+    lcd_clock_config();
+    lcd_config_init();
+    lcd_show_all();
+    
     while (1)
     {
         if (tim8_500ms_flag) // ??TIM8??????

@@ -7,7 +7,8 @@
 #include "LED.h"
 #include "timer8.h"
 #include "nivc.h"
-
+#include "gpio.h"
+#include "lcd.h"
 
 
 #endif /* __MAIN_H */
