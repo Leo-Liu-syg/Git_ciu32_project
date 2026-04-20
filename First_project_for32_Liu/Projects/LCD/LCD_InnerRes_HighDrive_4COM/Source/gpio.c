@@ -26,12 +26,15 @@ void gpio_init(void)
     gpio_config.output_type = GPIO_OUTPUT_PUSHPULL;
     std_gpio_init(GPIO_IIC, &gpio_config);
 
-    /* ADC电压/烟雾/CO */
+    /* ADCCO */
     gpio_config.mode = GPIO_MODE_ANALOG;
-    gpio_config.pin = PIN_VCO;
-    std_gpio_init(GPIO_VCO, &gpio_config);
-    gpio_config.pin = PIN_VBAT;
-    std_gpio_init(GPIO_VBAT, &gpio_config);
-    gpio_config.pin = PIN_VSMOKE;
-    std_gpio_init(GPIO_VSMOKE, &gpio_config);
+    /* ADC_IN2输入通道配置：PA4 */
+    gpio_config.pin = GPIO_PIN_4;
+    gpio_config.mode = GPIO_MODE_ANALOG;
+    std_gpio_init(GPIOA, &gpio_config);
+    
+    // /* VREFBUF输出引脚：PA0 */
+    // adc_gpio_config.pin = GPIO_PIN_0;
+    // adc_gpio_config.mode = GPIO_MODE_ANALOG;
+    // std_gpio_init(GPIOA, &adc_gpio_config);
 }

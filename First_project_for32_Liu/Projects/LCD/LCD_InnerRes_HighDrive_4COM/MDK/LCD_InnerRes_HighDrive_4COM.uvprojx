@@ -453,6 +453,26 @@
               <FileType>5</FileType>
               <FilePath>..\Source\LCD.h</FilePath>
             </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Source\adc.h</FilePath>
+            </File>
+            <File>
+              <FileName>timer3.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\timer3.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer3.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Source\timer3.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

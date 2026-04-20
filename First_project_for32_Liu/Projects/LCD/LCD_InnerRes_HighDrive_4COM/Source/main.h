@@ -4,6 +4,7 @@
 #define Temp_test
 #define Hum_test
 #define Mid_test
+#define CO_test
 
 #include "ciu32l051_std.h"
 #include "stdio.h"
