@@ -1,0 +1,929 @@
+Dependencies for Project 'ADC_TimerTrigger_DMA', Target 'ADC_TimerTrigger_DMA': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::ARMCC
+F (..\Source\main.c)(0x69E5B27F)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\Include\main.h)(0x676DF7CD)
+I (..\Include\adc_bsp.h)(0x676DF7CD)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+I (..\Include\common.h)(0x676DF7CD)
+F (..\Source\common.c)(0x67865FC1)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\common.o --omf_browse .\objects\common.crf --depend .\objects\common.d)
+I (..\Include\common.h)(0x676DF7CD)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\Source\adc_bsp.c)(0x676DF7CD)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\adc_bsp.o --omf_browse .\objects\adc_bsp.crf --depend .\objects\adc_bsp.d)
+I (..\Include\adc_bsp.h)(0x676DF7CD)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std.o --omf_browse .\objects\ciu32l051_std.crf --depend .\objects\ciu32l051_std.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_adc.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_adc.o --omf_browse .\objects\ciu32l051_std_adc.crf --depend .\objects\ciu32l051_std_adc.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_aes.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_aes.o --omf_browse .\objects\ciu32l051_std_aes.crf --depend .\objects\ciu32l051_std_aes.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_comp.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_comp.o --omf_browse .\objects\ciu32l051_std_comp.crf --depend .\objects\ciu32l051_std_comp.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_crc.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_crc.o --omf_browse .\objects\ciu32l051_std_crc.crf --depend .\objects\ciu32l051_std_crc.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_dma.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_dma.o --omf_browse .\objects\ciu32l051_std_dma.crf --depend .\objects\ciu32l051_std_dma.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_exti.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_exti.o --omf_browse .\objects\ciu32l051_std_exti.crf --depend .\objects\ciu32l051_std_exti.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_flash.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_flash.o --omf_browse .\objects\ciu32l051_std_flash.crf --depend .\objects\ciu32l051_std_flash.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_gpio.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_gpio.o --omf_browse .\objects\ciu32l051_std_gpio.crf --depend .\objects\ciu32l051_std_gpio.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_i2c.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_i2c.o --omf_browse .\objects\ciu32l051_std_i2c.crf --depend .\objects\ciu32l051_std_i2c.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_lcd.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_lcd.o --omf_browse .\objects\ciu32l051_std_lcd.crf --depend .\objects\ciu32l051_std_lcd.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_lptim.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_lptim.o --omf_browse .\objects\ciu32l051_std_lptim.crf --depend .\objects\ciu32l051_std_lptim.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_pmu.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_pmu.o --omf_browse .\objects\ciu32l051_std_pmu.crf --depend .\objects\ciu32l051_std_pmu.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_rcc.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_rcc.o --omf_browse .\objects\ciu32l051_std_rcc.crf --depend .\objects\ciu32l051_std_rcc.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_rtc.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_rtc.o --omf_browse .\objects\ciu32l051_std_rtc.crf --depend .\objects\ciu32l051_std_rtc.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_spi.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_spi.o --omf_browse .\objects\ciu32l051_std_spi.crf --depend .\objects\ciu32l051_std_spi.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_tamp.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_tamp.o --omf_browse .\objects\ciu32l051_std_tamp.crf --depend .\objects\ciu32l051_std_tamp.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_tim.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_tim.o --omf_browse .\objects\ciu32l051_std_tim.crf --depend .\objects\ciu32l051_std_tim.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_lpuart.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_lpuart.o --omf_browse .\objects\ciu32l051_std_lpuart.crf --depend .\objects\ciu32l051_std_lpuart.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32L051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_trng.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_trng.o --omf_browse .\objects\ciu32l051_std_trng.crf --depend .\objects\ciu32l051_std_trng.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_usart.c)(0x6760D3E5)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\ciu32l051_std_usart.o --omf_browse .\objects\ciu32l051_std_usart.crf --depend .\objects\ciu32l051_std_usart.d)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32L051_std.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_config.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_common.h)(0x6760D3E5)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5E8E2EB2)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_adc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_aes.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_comp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_crc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dbg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_dma.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_exti.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_flash.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_gpio.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_i2c.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_iwdg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lcd.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lptim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_lpuart.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_pmu.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_rtc.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_spi.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_syscfg.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tamp.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_tim.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_trng.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_usart.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_vrefbuf.h)(0x6760D3E5)
+I (..\..\..\..\Drivers\CIU32L051_Lib\Include\ciu32l051_std_wwdg.h)(0x6760D3E5)
+F (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.c)(0x6760D3E6)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\Include -I ..\..\..\..\Drivers\CIU32L051_Lib\Include -I ..\..\..\..\Drivers\CMSIS\Core -I ..\..\..\..\Drivers\CMSIS\Device-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include-D__UVISION_VERSION="533" -DCIU32L051 -DCIU32L051-o .\objects\system_ciu32l051.o --omf_browse .\objects\system_ciu32l051.crf --depend .\objects\system_ciu32l051.d)
+I (..\..\..\..\Drivers\CMSIS\Device\ciu32l051.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\core_cm0plus.h)(0x6760D3E6)
+I (D:\Workspace\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E2EB2)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_version.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_compiler.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Core\cmsis_armcc.h)(0x6760D3E6)
+I (..\..\..\..\Drivers\CMSIS\Device\system_ciu32l051.h)(0x6760D3E6)
+F (.\startup_ciu32l051.s)(0x676DF7CD)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\CIU32L051\Include-ID:\Workspace\Keil_v5\ARM\CMSIS\Include-ID:\Workspace\Keil_v5\ARM\PACK\HED\CIU32L0xx_DFP\1.2.5\Drivers\CMSIS\Device\HED\CIU32L051\Include--pd "__UVISION_VERSION SETA 533" --pd "CIU32L051 SETA 1"--list .\listings\startup_ciu32l051.lst --xref -o .\objects\startup_ciu32l051.o --depend .\objects\startup_ciu32l051.d)
+F (..\readme.txt)(0x676DF7CD)()

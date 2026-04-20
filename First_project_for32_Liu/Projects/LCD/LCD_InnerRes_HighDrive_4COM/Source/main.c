@@ -1,11 +1,19 @@
 #include "main.h"
 
+__IO uint32_t g_get_voltage;//adc-??3-PA4????
+
 int main(void)
 {
     /*????*/
     system_clock_config();
     std_delay_init();
     gpio_init();
+    
+    vrefbuf_init();
+    TIM3_init(); // ???timer3??ADC??
+    dma_init();    // ???DMA??ADC????
+    bsp_adc_dma_config(); // ??ADC?DMA?????
+    TIM3_adc_Enable(); // ??TIM3?ADC
 
     /*LED*/
     led_init();
@@ -18,6 +26,17 @@ int main(void)
     lcd_clock_config();
     lcd_config_init();
     lcd_show_all();
+
+    /*ºê¿ª¹Ø²âÊÔ*/
+    #ifdef Temp_test
+    lcd_show_temperature(25);
+    #endif
+    #ifdef Hum_test
+    lcd_show_humidity(50);
+    #endif
+    #ifdef Mid_test
+    lcd_show_mid_num(1234);
+    #endif
     
     while (1)
     {

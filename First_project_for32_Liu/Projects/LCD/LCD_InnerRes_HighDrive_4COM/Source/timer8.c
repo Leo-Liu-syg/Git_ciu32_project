@@ -14,7 +14,7 @@ void TIM8_init(void)
     /* 配置TIM8计数器参数 */
     basic_init_struct.prescaler = tmp_psc_value;
     basic_init_struct.counter_mode = TIM_COUNTER_MODE_UP;
-    basic_init_struct.period = TIM_ARR_VALUE;
+    basic_init_struct.period = TIM8_ARR_VALUE;
     basic_init_struct.clock_div = TIM_CLOCK_DTS_DIV1;
     basic_init_struct.auto_reload_preload = TIM_AUTORELOAD_PRE_DISABLE;
     std_tim_init(TIM8, &basic_init_struct);
