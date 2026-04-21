@@ -7,6 +7,8 @@
 #define LED_RED_PIN GPIO_PIN_15
 #define LED_RED_GPIO_PORT GPIOC
 #define LED_RED_FLIP() std_gpio_toggle_pin(LED_RED_GPIO_PORT, LED_RED_PIN)
+#define LED_RED_HIGH() std_gpio_set_pin(LED_RED_GPIO_PORT, LED_RED_PIN)
+#define LED_RED_LOW() std_gpio_reset_pin(LED_RED_GPIO_PORT, LED_RED_PIN)
 
 void led_init(void);
 

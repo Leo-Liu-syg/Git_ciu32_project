@@ -8,7 +8,7 @@
 #include "main.h"
 
 extern __IO uint8_t g_adc_complete;
-extern __IO uint16_t g_dma_result;
+extern __IO uint16_t g_dma_result[2];
     
 /*-------------------------------------------functions------------------------------------------*/
 void adc_init(void);

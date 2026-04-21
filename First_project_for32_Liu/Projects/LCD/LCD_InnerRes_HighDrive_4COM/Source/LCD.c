@@ -665,3 +665,10 @@ void lcd_show_mid_num(uint32_t Mid_vlaue)
     f_all_zero = 0;
     lcd_write_to_RAM();
 }
+
+void lcd_show_data(uint32_t Mid_vlaue, uint16_t Temp_value, uint16_t Hum_vlaue)
+{
+    lcd_show_mid_num(Mid_vlaue);
+    lcd_show_temperature(Temp_value);
+    lcd_show_humidity(Hum_vlaue);
+}

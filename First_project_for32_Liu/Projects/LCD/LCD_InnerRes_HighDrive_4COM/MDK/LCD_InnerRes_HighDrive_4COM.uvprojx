@@ -473,6 +473,16 @@
               <FileType>5</FileType>
               <FilePath>..\Source\timer3.h</FilePath>
             </File>
+            <File>
+              <FileName>app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>app.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Source\app.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

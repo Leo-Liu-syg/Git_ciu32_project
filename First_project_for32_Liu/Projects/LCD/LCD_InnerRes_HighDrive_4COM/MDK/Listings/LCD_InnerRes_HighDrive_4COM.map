@@ -24,15 +24,15 @@ Section Cross References
     main.o(i.main) refers to lcd.o(i.lcd_show_all) for lcd_show_all
     main.o(i.main) refers to lcd.o(i.lcd_show_temperature) for lcd_show_temperature
     main.o(i.main) refers to lcd.o(i.lcd_show_humidity) for lcd_show_humidity
-    main.o(i.main) refers to lcd.o(i.lcd_show_mid_num) for lcd_show_mid_num
-    main.o(i.main) refers to uidiv.o(.text) for __aeabi_uidivmod
-    main.o(i.main) refers to main.o(.data) for g_get_voltage
-    main.o(i.main) refers to timer8.o(.data) for tim8_500ms_flag
-    main.o(i.main) refers to adc.o(.data) for g_adc_complete
+    main.o(i.main) refers to app.o(i.app_Status_Control) for app_Status_Control
+    main.o(i.main) refers to app.o(i.app_LED_Control) for app_LED_Control
+    main.o(i.main) refers to app.o(i.app_LCD_Control) for app_LCD_Control
+    main.o(i.main) refers to app.o(i.app_get_adc_data_process) for app_get_adc_data_process
     ssc.o(i.system_clock_config) refers to system_ciu32l051.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
     nivc.o(i.nvic_init) refers to nivc.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
     nivc.o(i.nvic_init) refers to nivc.o(i.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
-    timer8.o(i.TIM8_IRQHandler) refers to timer8.o(.data) for tim8_500ms_count
+    timer8.o(i.TIM8_IRQHandler) refers to timer8.o(.data) for tim8_1s_count
+    timer8.o(i.TIM8_IRQHandler) refers to app.o(.data) for Running_LCD_Flag
     timer8.o(i.TIM8_init) refers to memseta.o(.text) for __aeabi_memclr4
     timer8.o(i.TIM8_init) refers to uidiv.o(.text) for __aeabi_uidivmod
     timer8.o(i.TIM8_init) refers to ciu32l051_std_tim.o(i.std_tim_init) for std_tim_init
@@ -48,6 +48,9 @@ Section Cross References
     lcd.o(i.lcd_config_init) refers to ciu32l051_std_lcd.o(i.std_lcd_init) for std_lcd_init
     lcd.o(i.lcd_show_all) refers to lcd.o(i.lcd_write_to_RAM) for lcd_write_to_RAM
     lcd.o(i.lcd_show_all) refers to lcd.o(.data) for com1
+    lcd.o(i.lcd_show_data) refers to lcd.o(i.lcd_show_mid_num) for lcd_show_mid_num
+    lcd.o(i.lcd_show_data) refers to lcd.o(i.lcd_show_temperature) for lcd_show_temperature
+    lcd.o(i.lcd_show_data) refers to lcd.o(i.lcd_show_humidity) for lcd_show_humidity
     lcd.o(i.lcd_show_humidity) refers to idiv.o(.text) for __aeabi_idivmod
     lcd.o(i.lcd_show_humidity) refers to lcd.o(i.__ARM_common_switch8) for __ARM_common_switch8
     lcd.o(i.lcd_show_humidity) refers to lcd.o(i.lcd_write_to_RAM) for lcd_write_to_RAM
@@ -66,6 +69,8 @@ Section Cross References
     adc.o(i.adc_init) refers to memseta.o(.text) for __aeabi_memclr4
     adc.o(i.adc_init) refers to adc.o(i.std_rcc_apb2_clk_enable) for std_rcc_apb2_clk_enable
     adc.o(i.adc_init) refers to ciu32l051_std_adc.o(i.std_adc_init) for std_adc_init
+    adc.o(i.adc_init) refers to adc.o(i.std_adc_fix_sequence_channel_enable) for std_adc_fix_sequence_channel_enable
+    adc.o(i.adc_init) refers to adc.o(i.std_adc_channel_sample_time_select) for std_adc_channel_sample_time_select
     adc.o(i.adc_init) refers to ciu32l051_std.o(i.std_delayus) for std_delayus
     adc.o(i.bsp_adc_dma_config) refers to ciu32l051_std_dma.o(i.std_dma_start_transmit) for std_dma_start_transmit
     adc.o(i.bsp_adc_dma_config) refers to adc.o(.data) for g_dma_result
@@ -78,6 +83,25 @@ Section Cross References
     timer3.o(i.TIM3_init) refers to uidiv.o(.text) for __aeabi_uidivmod
     timer3.o(i.TIM3_init) refers to ciu32l051_std_tim.o(i.std_tim_init) for std_tim_init
     timer3.o(i.TIM3_init) refers to system_ciu32l051.o(.data) for SystemCoreClock
+    app.o(i.app_LCD_Control) refers to lcd.o(i.lcd_show_mid_num) for lcd_show_mid_num
+    app.o(i.app_LCD_Control) refers to lcd.o(i.lcd_show_temperature) for lcd_show_temperature
+    app.o(i.app_LCD_Control) refers to lcd.o(i.lcd_show_humidity) for lcd_show_humidity
+    app.o(i.app_LCD_Control) refers to app.o(i.app_value_convert) for app_value_convert
+    app.o(i.app_LCD_Control) refers to app.o(.data) for Status
+    app.o(i.app_LCD_Control) refers to timer8.o(.data) for tim8_1s_flag
+    app.o(i.app_LCD_Control) refers to lcd.o(.data) for com4
+    app.o(i.app_LED_Control) refers to app.o(i.std_gpio_set_pin) for std_gpio_set_pin
+    app.o(i.app_LED_Control) refers to app.o(i.std_gpio_reset_pin) for std_gpio_reset_pin
+    app.o(i.app_LED_Control) refers to app.o(.data) for Status
+    app.o(i.app_LED_Control) refers to timer8.o(.data) for tim8_1s_flag
+    app.o(i.app_Status_Control) refers to lcd.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    app.o(i.app_Status_Control) refers to timer8.o(.data) for tim8_wait
+    app.o(i.app_Status_Control) refers to app.o(.data) for Status
+    app.o(i.app_get_adc_data_process) refers to uidiv.o(.text) for __aeabi_uidivmod
+    app.o(i.app_get_adc_data_process) refers to adc.o(.data) for g_adc_complete
+    app.o(i.app_get_adc_data_process) refers to app.o(.data) for Get_Smoke_Voltage
+    app.o(i.app_value_convert) refers to uidiv.o(.text) for __aeabi_uidivmod
+    app.o(i.app_value_convert) refers to app.o(.data) for Get_CO_Voltage
     ciu32l051_std.o(i.std_delayms) refers to ciu32l051_std.o(i.std_delayus) for std_delayus
     ciu32l051_std.o(i.std_delayms_start) refers to ciu32l051_std.o(i.std_delayus_start) for std_delayus_start
     ciu32l051_std.o(i.std_delayus) refers to uidiv.o(.text) for __aeabi_uidivmod
@@ -220,6 +244,7 @@ Removing Unused input sections from the image.
     Removing lcd.o(.rev16_text), (4 bytes).
     Removing lcd.o(.revsh_text), (4 bytes).
     Removing lcd.o(i.lcd_clean_all), (44 bytes).
+    Removing lcd.o(i.lcd_show_data), (28 bytes).
     Removing lcd.o(.constdata), (24 bytes).
     Removing adc.o(.rev16_text), (4 bytes).
     Removing adc.o(.revsh_text), (4 bytes).
@@ -227,6 +252,9 @@ Removing Unused input sections from the image.
     Removing timer3.o(.rev16_text), (4 bytes).
     Removing timer3.o(.revsh_text), (4 bytes).
     Removing timer3.o(.constdata), (24 bytes).
+    Removing app.o(.rev16_text), (4 bytes).
+    Removing app.o(.revsh_text), (4 bytes).
+    Removing app.o(.constdata), (24 bytes).
     Removing ciu32l051_std.o(.rev16_text), (4 bytes).
     Removing ciu32l051_std.o(.revsh_text), (4 bytes).
     Removing ciu32l051_std.o(i.std_delay_end), (20 bytes).
@@ -387,7 +415,7 @@ Removing Unused input sections from the image.
     Removing system_ciu32l051.o(.revsh_text), (4 bytes).
     Removing startup_ciu32l051.o(HEAP), (0 bytes).
 
-187 unused section(s) (total 6664 bytes) removed from the image.
+191 unused section(s) (total 6724 bytes) removed from the image.
 
 ==============================================================================
 
@@ -398,25 +426,25 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry12a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std.c 0x00000000   Number         0  ciu32l051_std.o ABSOLUTE
     ..\..\..\..\Drivers\CIU32L051_Lib\Source\ciu32l051_std_adc.c 0x00000000   Number         0  ciu32l051_std_adc.o ABSOLUTE
@@ -443,6 +471,7 @@ Image Symbol Table
     ..\Source\LCD.c                          0x00000000   Number         0  lcd.o ABSOLUTE
     ..\Source\LED.c                          0x00000000   Number         0  led.o ABSOLUTE
     ..\Source\adc.c                          0x00000000   Number         0  adc.o ABSOLUTE
+    ..\Source\app.c                          0x00000000   Number         0  app.o ABSOLUTE
     ..\Source\gpio.c                         0x00000000   Number         0  gpio.o ABSOLUTE
     ..\Source\main.c                         0x00000000   Number         0  main.o ABSOLUTE
     ..\Source\nivc.c                         0x00000000   Number         0  nivc.o ABSOLUTE
@@ -474,6 +503,7 @@ Image Symbol Table
     ..\\Source\\LCD.c                        0x00000000   Number         0  lcd.o ABSOLUTE
     ..\\Source\\LED.c                        0x00000000   Number         0  led.o ABSOLUTE
     ..\\Source\\adc.c                        0x00000000   Number         0  adc.o ABSOLUTE
+    ..\\Source\\app.c                        0x00000000   Number         0  app.o ABSOLUTE
     ..\\Source\\gpio.c                       0x00000000   Number         0  gpio.o ABSOLUTE
     ..\\Source\\main.c                       0x00000000   Number         0  main.o ABSOLUTE
     ..\\Source\\nivc.c                       0x00000000   Number         0  nivc.o ABSOLUTE
@@ -507,77 +537,90 @@ Image Symbol Table
     i.TIM3_adc_Enable                        0x08000304   Section        0  timer3.o(i.TIM3_adc_Enable)
     i.TIM3_init                              0x08000328   Section        0  timer3.o(i.TIM3_init)
     i.TIM8_IRQHandler                        0x08000398   Section        0  timer8.o(i.TIM8_IRQHandler)
-    i.TIM8_init                              0x080003f8   Section        0  timer8.o(i.TIM8_init)
-    i.__ARM_common_switch8                   0x08000450   Section        0  lcd.o(i.__ARM_common_switch8)
-    i.__NVIC_EnableIRQ                       0x0800046c   Section        0  nivc.o(i.__NVIC_EnableIRQ)
-    __NVIC_EnableIRQ                         0x0800046d   Thumb Code    18  nivc.o(i.__NVIC_EnableIRQ)
-    i.__NVIC_SetPriority                     0x08000484   Section        0  nivc.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x08000485   Thumb Code   110  nivc.o(i.__NVIC_SetPriority)
-    i.__NVIC_SetPriority                     0x080004fc   Section        0  adc.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x080004fd   Thumb Code   110  adc.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x08000574   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08000582   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08000584   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.adc_init                               0x08000594   Section        0  adc.o(i.adc_init)
-    i.bsp_adc_dma_config                     0x0800066c   Section        0  adc.o(i.bsp_adc_dma_config)
-    i.bsp_tim8_start                         0x08000698   Section        0  timer8.o(i.bsp_tim8_start)
-    i.dma_init                               0x080006bc   Section        0  adc.o(i.dma_init)
-    i.gpio_init                              0x08000740   Section        0  gpio.o(i.gpio_init)
-    i.lcd_clock_config                       0x080007d8   Section        0  lcd.o(i.lcd_clock_config)
-    i.lcd_config_init                        0x08000838   Section        0  lcd.o(i.lcd_config_init)
-    i.lcd_show_all                           0x080008ec   Section        0  lcd.o(i.lcd_show_all)
-    i.lcd_show_humidity                      0x08000924   Section        0  lcd.o(i.lcd_show_humidity)
-    i.lcd_show_mid_num                       0x08000c78   Section        0  lcd.o(i.lcd_show_mid_num)
-    i.lcd_show_temperature                   0x080014ec   Section        0  lcd.o(i.lcd_show_temperature)
-    i.lcd_write_to_RAM                       0x08001a24   Section        0  lcd.o(i.lcd_write_to_RAM)
-    i.led_init                               0x08001a78   Section        0  led.o(i.led_init)
-    i.main                                   0x08001abc   Section        0  main.o(i.main)
-    i.nvic_init                              0x08001b88   Section        0  nivc.o(i.nvic_init)
-    i.std_adc_init                           0x08001ba8   Section        0  ciu32l051_std_adc.o(i.std_adc_init)
-    i.std_adc_trig_edge_config               0x08001c68   Section        0  ciu32l051_std_adc.o(i.std_adc_trig_edge_config)
-    std_adc_trig_edge_config                 0x08001c69   Thumb Code    18  ciu32l051_std_adc.o(i.std_adc_trig_edge_config)
-    i.std_delay_init                         0x08001c80   Section        0  ciu32l051_std.o(i.std_delay_init)
-    i.std_delayus                            0x08001ca0   Section        0  ciu32l051_std.o(i.std_delayus)
-    i.std_dma_init                           0x08001ce4   Section        0  ciu32l051_std_dma.o(i.std_dma_init)
-    i.std_dma_set_dst_address                0x08001d40   Section        0  ciu32l051_std_dma.o(i.std_dma_set_dst_address)
-    std_dma_set_dst_address                  0x08001d41   Thumb Code    12  ciu32l051_std_dma.o(i.std_dma_set_dst_address)
-    i.std_dma_set_src_address                0x08001d50   Section        0  ciu32l051_std_dma.o(i.std_dma_set_src_address)
-    std_dma_set_src_address                  0x08001d51   Thumb Code    12  ciu32l051_std_dma.o(i.std_dma_set_src_address)
-    i.std_dma_set_transfer_data_number       0x08001d60   Section        0  ciu32l051_std_dma.o(i.std_dma_set_transfer_data_number)
-    std_dma_set_transfer_data_number         0x08001d61   Thumb Code    12  ciu32l051_std_dma.o(i.std_dma_set_transfer_data_number)
-    i.std_dma_start_transmit                 0x08001d70   Section        0  ciu32l051_std_dma.o(i.std_dma_start_transmit)
-    i.std_gpio_init                          0x08001dac   Section        0  ciu32l051_std_gpio.o(i.std_gpio_init)
-    i.std_gpio_set_afpin_0_7                 0x08001e1c   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_0_7)
-    std_gpio_set_afpin_0_7                   0x08001e1d   Thumb Code    36  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_0_7)
-    i.std_gpio_set_afpin_8_15                0x08001e40   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_8_15)
-    std_gpio_set_afpin_8_15                  0x08001e41   Thumb Code    42  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_8_15)
-    i.std_gpio_set_pin_mode                  0x08001e6a   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_pin_mode)
-    std_gpio_set_pin_mode                    0x08001e6b   Thumb Code    26  ciu32l051_std_gpio.o(i.std_gpio_set_pin_mode)
-    i.std_gpio_set_pin_output_type           0x08001e84   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_pin_output_type)
-    std_gpio_set_pin_output_type             0x08001e85   Thumb Code    16  ciu32l051_std_gpio.o(i.std_gpio_set_pin_output_type)
-    i.std_gpio_set_pin_pull                  0x08001e94   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_pin_pull)
-    std_gpio_set_pin_pull                    0x08001e95   Thumb Code    26  ciu32l051_std_gpio.o(i.std_gpio_set_pin_pull)
-    i.std_lcd_disable                        0x08001eb0   Section        0  ciu32l051_std_lcd.o(i.std_lcd_disable)
-    std_lcd_disable                          0x08001eb1   Thumb Code    14  ciu32l051_std_lcd.o(i.std_lcd_disable)
-    i.std_lcd_get_flag                       0x08001ec4   Section        0  ciu32l051_std_lcd.o(i.std_lcd_get_flag)
-    std_lcd_get_flag                         0x08001ec5   Thumb Code    20  ciu32l051_std_lcd.o(i.std_lcd_get_flag)
-    i.std_lcd_init                           0x08001edc   Section        0  ciu32l051_std_lcd.o(i.std_lcd_init)
-    i.std_lcd_write                          0x08001f4c   Section        0  lcd.o(i.std_lcd_write)
-    std_lcd_write                            0x08001f4d   Thumb Code    22  lcd.o(i.std_lcd_write)
-    i.std_rcc_apb1_clk_enable                0x08001f68   Section        0  lcd.o(i.std_rcc_apb1_clk_enable)
-    std_rcc_apb1_clk_enable                  0x08001f69   Thumb Code    18  lcd.o(i.std_rcc_apb1_clk_enable)
-    i.std_rcc_apb2_clk_enable                0x08001f80   Section        0  adc.o(i.std_rcc_apb2_clk_enable)
-    std_rcc_apb2_clk_enable                  0x08001f81   Thumb Code    18  adc.o(i.std_rcc_apb2_clk_enable)
-    i.std_tim_init                           0x08001f98   Section        0  ciu32l051_std_tim.o(i.std_tim_init)
-    i.system_clock_config                    0x08001fe4   Section        0  ssc.o(i.system_clock_config)
-    i.vrefbuf_init                           0x080020e0   Section        0  adc.o(i.vrefbuf_init)
-    .constdata                               0x0800217c   Section       64  system_ciu32l051.o(.constdata)
-    .data                                    0x20000000   Section        5  main.o(.data)
-    .data                                    0x20000005   Section        2  timer8.o(.data)
+    i.TIM8_init                              0x08000444   Section        0  timer8.o(i.TIM8_init)
+    i.__ARM_common_switch8                   0x0800049c   Section        0  lcd.o(i.__ARM_common_switch8)
+    i.__NVIC_EnableIRQ                       0x080004b8   Section        0  nivc.o(i.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x080004b9   Thumb Code    18  nivc.o(i.__NVIC_EnableIRQ)
+    i.__NVIC_SetPriority                     0x080004d0   Section        0  nivc.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x080004d1   Thumb Code   110  nivc.o(i.__NVIC_SetPriority)
+    i.__NVIC_SetPriority                     0x08000548   Section        0  adc.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08000549   Thumb Code   110  adc.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x080005c0   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x080005ce   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x080005d0   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.adc_init                               0x080005e0   Section        0  adc.o(i.adc_init)
+    i.app_LCD_Control                        0x080006a8   Section        0  app.o(i.app_LCD_Control)
+    i.app_LED_Control                        0x08000864   Section        0  app.o(i.app_LED_Control)
+    i.app_Status_Control                     0x080008dc   Section        0  app.o(i.app_Status_Control)
+    i.app_get_adc_data_process               0x08000974   Section        0  app.o(i.app_get_adc_data_process)
+    i.app_value_convert                      0x080009c8   Section        0  app.o(i.app_value_convert)
+    i.bsp_adc_dma_config                     0x08000ab8   Section        0  adc.o(i.bsp_adc_dma_config)
+    i.bsp_tim8_start                         0x08000ae4   Section        0  timer8.o(i.bsp_tim8_start)
+    i.dma_init                               0x08000b08   Section        0  adc.o(i.dma_init)
+    i.gpio_init                              0x08000b8c   Section        0  gpio.o(i.gpio_init)
+    i.lcd_clock_config                       0x08000c24   Section        0  lcd.o(i.lcd_clock_config)
+    i.lcd_config_init                        0x08000c84   Section        0  lcd.o(i.lcd_config_init)
+    i.lcd_show_all                           0x08000d38   Section        0  lcd.o(i.lcd_show_all)
+    i.lcd_show_humidity                      0x08000d70   Section        0  lcd.o(i.lcd_show_humidity)
+    i.lcd_show_mid_num                       0x080010c4   Section        0  lcd.o(i.lcd_show_mid_num)
+    i.lcd_show_temperature                   0x08001938   Section        0  lcd.o(i.lcd_show_temperature)
+    i.lcd_write_to_RAM                       0x08001e70   Section        0  lcd.o(i.lcd_write_to_RAM)
+    i.led_init                               0x08001ec4   Section        0  led.o(i.led_init)
+    i.main                                   0x08001f08   Section        0  main.o(i.main)
+    i.nvic_init                              0x08001f68   Section        0  nivc.o(i.nvic_init)
+    i.std_adc_channel_sample_time_select     0x08001f88   Section        0  adc.o(i.std_adc_channel_sample_time_select)
+    std_adc_channel_sample_time_select       0x08001f89   Thumb Code    32  adc.o(i.std_adc_channel_sample_time_select)
+    i.std_adc_fix_sequence_channel_enable    0x08001fac   Section        0  adc.o(i.std_adc_fix_sequence_channel_enable)
+    std_adc_fix_sequence_channel_enable      0x08001fad   Thumb Code    12  adc.o(i.std_adc_fix_sequence_channel_enable)
+    i.std_adc_init                           0x08001fbc   Section        0  ciu32l051_std_adc.o(i.std_adc_init)
+    i.std_adc_trig_edge_config               0x0800207c   Section        0  ciu32l051_std_adc.o(i.std_adc_trig_edge_config)
+    std_adc_trig_edge_config                 0x0800207d   Thumb Code    18  ciu32l051_std_adc.o(i.std_adc_trig_edge_config)
+    i.std_delay_init                         0x08002094   Section        0  ciu32l051_std.o(i.std_delay_init)
+    i.std_delayus                            0x080020b4   Section        0  ciu32l051_std.o(i.std_delayus)
+    i.std_dma_init                           0x080020f8   Section        0  ciu32l051_std_dma.o(i.std_dma_init)
+    i.std_dma_set_dst_address                0x08002154   Section        0  ciu32l051_std_dma.o(i.std_dma_set_dst_address)
+    std_dma_set_dst_address                  0x08002155   Thumb Code    12  ciu32l051_std_dma.o(i.std_dma_set_dst_address)
+    i.std_dma_set_src_address                0x08002164   Section        0  ciu32l051_std_dma.o(i.std_dma_set_src_address)
+    std_dma_set_src_address                  0x08002165   Thumb Code    12  ciu32l051_std_dma.o(i.std_dma_set_src_address)
+    i.std_dma_set_transfer_data_number       0x08002174   Section        0  ciu32l051_std_dma.o(i.std_dma_set_transfer_data_number)
+    std_dma_set_transfer_data_number         0x08002175   Thumb Code    12  ciu32l051_std_dma.o(i.std_dma_set_transfer_data_number)
+    i.std_dma_start_transmit                 0x08002184   Section        0  ciu32l051_std_dma.o(i.std_dma_start_transmit)
+    i.std_gpio_init                          0x080021c0   Section        0  ciu32l051_std_gpio.o(i.std_gpio_init)
+    i.std_gpio_reset_pin                     0x08002230   Section        0  app.o(i.std_gpio_reset_pin)
+    std_gpio_reset_pin                       0x08002231   Thumb Code     4  app.o(i.std_gpio_reset_pin)
+    i.std_gpio_set_afpin_0_7                 0x08002234   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_0_7)
+    std_gpio_set_afpin_0_7                   0x08002235   Thumb Code    36  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_0_7)
+    i.std_gpio_set_afpin_8_15                0x08002258   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_8_15)
+    std_gpio_set_afpin_8_15                  0x08002259   Thumb Code    42  ciu32l051_std_gpio.o(i.std_gpio_set_afpin_8_15)
+    i.std_gpio_set_pin                       0x08002282   Section        0  app.o(i.std_gpio_set_pin)
+    std_gpio_set_pin                         0x08002283   Thumb Code     4  app.o(i.std_gpio_set_pin)
+    i.std_gpio_set_pin_mode                  0x08002286   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_pin_mode)
+    std_gpio_set_pin_mode                    0x08002287   Thumb Code    26  ciu32l051_std_gpio.o(i.std_gpio_set_pin_mode)
+    i.std_gpio_set_pin_output_type           0x080022a0   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_pin_output_type)
+    std_gpio_set_pin_output_type             0x080022a1   Thumb Code    16  ciu32l051_std_gpio.o(i.std_gpio_set_pin_output_type)
+    i.std_gpio_set_pin_pull                  0x080022b0   Section        0  ciu32l051_std_gpio.o(i.std_gpio_set_pin_pull)
+    std_gpio_set_pin_pull                    0x080022b1   Thumb Code    26  ciu32l051_std_gpio.o(i.std_gpio_set_pin_pull)
+    i.std_lcd_disable                        0x080022cc   Section        0  ciu32l051_std_lcd.o(i.std_lcd_disable)
+    std_lcd_disable                          0x080022cd   Thumb Code    14  ciu32l051_std_lcd.o(i.std_lcd_disable)
+    i.std_lcd_get_flag                       0x080022e0   Section        0  ciu32l051_std_lcd.o(i.std_lcd_get_flag)
+    std_lcd_get_flag                         0x080022e1   Thumb Code    20  ciu32l051_std_lcd.o(i.std_lcd_get_flag)
+    i.std_lcd_init                           0x080022f8   Section        0  ciu32l051_std_lcd.o(i.std_lcd_init)
+    i.std_lcd_write                          0x08002368   Section        0  lcd.o(i.std_lcd_write)
+    std_lcd_write                            0x08002369   Thumb Code    22  lcd.o(i.std_lcd_write)
+    i.std_rcc_apb1_clk_enable                0x08002384   Section        0  lcd.o(i.std_rcc_apb1_clk_enable)
+    std_rcc_apb1_clk_enable                  0x08002385   Thumb Code    18  lcd.o(i.std_rcc_apb1_clk_enable)
+    i.std_rcc_apb2_clk_enable                0x0800239c   Section        0  adc.o(i.std_rcc_apb2_clk_enable)
+    std_rcc_apb2_clk_enable                  0x0800239d   Thumb Code    18  adc.o(i.std_rcc_apb2_clk_enable)
+    i.std_tim_init                           0x080023b4   Section        0  ciu32l051_std_tim.o(i.std_tim_init)
+    i.system_clock_config                    0x08002400   Section        0  ssc.o(i.system_clock_config)
+    i.vrefbuf_init                           0x080024fc   Section        0  adc.o(i.vrefbuf_init)
+    .constdata                               0x08002598   Section       64  system_ciu32l051.o(.constdata)
+    .data                                    0x20000000   Section        8  timer8.o(.data)
     .data                                    0x20000008   Section       40  lcd.o(.data)
-    .data                                    0x20000030   Section        4  adc.o(.data)
-    .data                                    0x20000034   Section        4  system_ciu32l051.o(.data)
-    STACK                                    0x20000038   Section     1024  startup_ciu32l051.o(STACK)
+    .data                                    0x20000030   Section        6  adc.o(.data)
+    .data                                    0x20000038   Section       28  app.o(.data)
+    .data                                    0x20000054   Section        4  system_ciu32l051.o(.data)
+    STACK                                    0x20000058   Section     1024  startup_ciu32l051.o(STACK)
 
     Global Symbols
 
@@ -654,45 +697,51 @@ Image Symbol Table
     SystemInit                               0x080002e5   Thumb Code    14  system_ciu32l051.o(i.SystemInit)
     TIM3_adc_Enable                          0x08000305   Thumb Code    28  timer3.o(i.TIM3_adc_Enable)
     TIM3_init                                0x08000329   Thumb Code    90  timer3.o(i.TIM3_init)
-    TIM8_IRQHandler                          0x08000399   Thumb Code    82  timer8.o(i.TIM8_IRQHandler)
-    TIM8_init                                0x080003f9   Thumb Code    72  timer8.o(i.TIM8_init)
-    __ARM_common_switch8                     0x08000451   Thumb Code    28  lcd.o(i.__ARM_common_switch8)
-    __scatterload_copy                       0x08000575   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08000583   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08000585   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    adc_init                                 0x08000595   Thumb Code   210  adc.o(i.adc_init)
-    bsp_adc_dma_config                       0x0800066d   Thumb Code    34  adc.o(i.bsp_adc_dma_config)
-    bsp_tim8_start                           0x08000699   Thumb Code    32  timer8.o(i.bsp_tim8_start)
-    dma_init                                 0x080006bd   Thumb Code   120  adc.o(i.dma_init)
-    gpio_init                                0x08000741   Thumb Code   130  gpio.o(i.gpio_init)
-    lcd_clock_config                         0x080007d9   Thumb Code    88  lcd.o(i.lcd_clock_config)
-    lcd_config_init                          0x08000839   Thumb Code   174  lcd.o(i.lcd_config_init)
-    lcd_show_all                             0x080008ed   Thumb Code    30  lcd.o(i.lcd_show_all)
-    lcd_show_humidity                        0x08000925   Thumb Code   824  lcd.o(i.lcd_show_humidity)
-    lcd_show_mid_num                         0x08000c79   Thumb Code  2144  lcd.o(i.lcd_show_mid_num)
-    lcd_show_temperature                     0x080014ed   Thumb Code  1318  lcd.o(i.lcd_show_temperature)
-    lcd_write_to_RAM                         0x08001a25   Thumb Code    64  lcd.o(i.lcd_write_to_RAM)
-    led_init                                 0x08001a79   Thumb Code    60  led.o(i.led_init)
-    main                                     0x08001abd   Thumb Code   164  main.o(i.main)
-    nvic_init                                0x08001b89   Thumb Code    32  nivc.o(i.nvic_init)
-    std_adc_init                             0x08001ba9   Thumb Code   188  ciu32l051_std_adc.o(i.std_adc_init)
-    std_delay_init                           0x08001c81   Thumb Code    26  ciu32l051_std.o(i.std_delay_init)
-    std_delayus                              0x08001ca1   Thumb Code    56  ciu32l051_std.o(i.std_delayus)
-    std_dma_init                             0x08001ce5   Thumb Code    82  ciu32l051_std_dma.o(i.std_dma_init)
-    std_dma_start_transmit                   0x08001d71   Thumb Code    54  ciu32l051_std_dma.o(i.std_dma_start_transmit)
-    std_gpio_init                            0x08001dad   Thumb Code   112  ciu32l051_std_gpio.o(i.std_gpio_init)
-    std_lcd_init                             0x08001edd   Thumb Code    98  ciu32l051_std_lcd.o(i.std_lcd_init)
-    std_tim_init                             0x08001f99   Thumb Code    72  ciu32l051_std_tim.o(i.std_tim_init)
-    system_clock_config                      0x08001fe5   Thumb Code   240  ssc.o(i.system_clock_config)
-    vrefbuf_init                             0x080020e1   Thumb Code   134  adc.o(i.vrefbuf_init)
-    g_ahb_divider_table                      0x0800217c   Data          32  system_ciu32l051.o(.constdata)
-    g_apb_divider_table                      0x0800219c   Data          32  system_ciu32l051.o(.constdata)
-    Region$$Table$$Base                      0x080021bc   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080021dc   Number         0  anon$$obj.o(Region$$Table)
-    g_get_voltage                            0x20000000   Data           4  main.o(.data)
-    test_Hello_baby                          0x20000004   Data           1  main.o(.data)
-    tim8_500ms_count                         0x20000005   Data           1  timer8.o(.data)
-    tim8_500ms_flag                          0x20000006   Data           1  timer8.o(.data)
+    TIM8_IRQHandler                          0x08000399   Thumb Code   142  timer8.o(i.TIM8_IRQHandler)
+    TIM8_init                                0x08000445   Thumb Code    72  timer8.o(i.TIM8_init)
+    __ARM_common_switch8                     0x0800049d   Thumb Code    28  lcd.o(i.__ARM_common_switch8)
+    __scatterload_copy                       0x080005c1   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x080005cf   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x080005d1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    adc_init                                 0x080005e1   Thumb Code   194  adc.o(i.adc_init)
+    app_LCD_Control                          0x080006a9   Thumb Code   402  app.o(i.app_LCD_Control)
+    app_LED_Control                          0x08000865   Thumb Code   108  app.o(i.app_LED_Control)
+    app_Status_Control                       0x080008dd   Thumb Code   124  app.o(i.app_Status_Control)
+    app_get_adc_data_process                 0x08000975   Thumb Code    58  app.o(i.app_get_adc_data_process)
+    app_value_convert                        0x080009c9   Thumb Code   210  app.o(i.app_value_convert)
+    bsp_adc_dma_config                       0x08000ab9   Thumb Code    34  adc.o(i.bsp_adc_dma_config)
+    bsp_tim8_start                           0x08000ae5   Thumb Code    32  timer8.o(i.bsp_tim8_start)
+    dma_init                                 0x08000b09   Thumb Code   120  adc.o(i.dma_init)
+    gpio_init                                0x08000b8d   Thumb Code   130  gpio.o(i.gpio_init)
+    lcd_clock_config                         0x08000c25   Thumb Code    88  lcd.o(i.lcd_clock_config)
+    lcd_config_init                          0x08000c85   Thumb Code   174  lcd.o(i.lcd_config_init)
+    lcd_show_all                             0x08000d39   Thumb Code    30  lcd.o(i.lcd_show_all)
+    lcd_show_humidity                        0x08000d71   Thumb Code   824  lcd.o(i.lcd_show_humidity)
+    lcd_show_mid_num                         0x080010c5   Thumb Code  2144  lcd.o(i.lcd_show_mid_num)
+    lcd_show_temperature                     0x08001939   Thumb Code  1318  lcd.o(i.lcd_show_temperature)
+    lcd_write_to_RAM                         0x08001e71   Thumb Code    64  lcd.o(i.lcd_write_to_RAM)
+    led_init                                 0x08001ec5   Thumb Code    60  led.o(i.led_init)
+    main                                     0x08001f09   Thumb Code    96  main.o(i.main)
+    nvic_init                                0x08001f69   Thumb Code    32  nivc.o(i.nvic_init)
+    std_adc_init                             0x08001fbd   Thumb Code   188  ciu32l051_std_adc.o(i.std_adc_init)
+    std_delay_init                           0x08002095   Thumb Code    26  ciu32l051_std.o(i.std_delay_init)
+    std_delayus                              0x080020b5   Thumb Code    56  ciu32l051_std.o(i.std_delayus)
+    std_dma_init                             0x080020f9   Thumb Code    82  ciu32l051_std_dma.o(i.std_dma_init)
+    std_dma_start_transmit                   0x08002185   Thumb Code    54  ciu32l051_std_dma.o(i.std_dma_start_transmit)
+    std_gpio_init                            0x080021c1   Thumb Code   112  ciu32l051_std_gpio.o(i.std_gpio_init)
+    std_lcd_init                             0x080022f9   Thumb Code    98  ciu32l051_std_lcd.o(i.std_lcd_init)
+    std_tim_init                             0x080023b5   Thumb Code    72  ciu32l051_std_tim.o(i.std_tim_init)
+    system_clock_config                      0x08002401   Thumb Code   240  ssc.o(i.system_clock_config)
+    vrefbuf_init                             0x080024fd   Thumb Code   134  adc.o(i.vrefbuf_init)
+    g_ahb_divider_table                      0x08002598   Data          32  system_ciu32l051.o(.constdata)
+    g_apb_divider_table                      0x080025b8   Data          32  system_ciu32l051.o(.constdata)
+    Region$$Table$$Base                      0x080025d8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080025f8   Number         0  anon$$obj.o(Region$$Table)
+    tim8_500ms_count                         0x20000000   Data           1  timer8.o(.data)
+    tim8_500ms_flag                          0x20000001   Data           1  timer8.o(.data)
+    tim8_1s_count                            0x20000002   Data           1  timer8.o(.data)
+    tim8_1s_flag                             0x20000003   Data           1  timer8.o(.data)
+    tim8_wait                                0x20000004   Data           4  timer8.o(.data)
     mid_num                                  0x20000008   Data           4  lcd.o(.data)
     temperature                              0x2000000c   Data           4  lcd.o(.data)
     temperature_low                          0x20000010   Data           1  lcd.o(.data)
@@ -704,9 +753,19 @@ Image Symbol Table
     com4                                     0x20000028   Data           4  lcd.o(.data)
     com5                                     0x2000002c   Data           4  lcd.o(.data)
     g_adc_complete                           0x20000030   Data           1  adc.o(.data)
-    g_dma_result                             0x20000032   Data           2  adc.o(.data)
-    SystemCoreClock                          0x20000034   Data           4  system_ciu32l051.o(.data)
-    __initial_sp                             0x20000438   Data           0  startup_ciu32l051.o(STACK)
+    g_dma_result                             0x20000032   Data           4  adc.o(.data)
+    Get_CO_Voltage                           0x20000038   Data           4  app.o(.data)
+    Get_Smoke_Voltage                        0x2000003c   Data           4  app.o(.data)
+    Get_CO_Zero                              0x20000040   Data           4  app.o(.data)
+    Get_Smoke_Zero                           0x20000044   Data           4  app.o(.data)
+    ppm_co                                   0x20000048   Data           4  app.o(.data)
+    dbm_somke                                0x2000004c   Data           4  app.o(.data)
+    test_Hello_baby                          0x20000050   Data           1  app.o(.data)
+    Running_LCD_count_60s                    0x20000051   Data           1  app.o(.data)
+    Running_LCD_Flag                         0x20000052   Data           1  app.o(.data)
+    Status                                   0x20000053   Data           1  app.o(.data)
+    SystemCoreClock                          0x20000054   Data           4  system_ciu32l051.o(.data)
+    __initial_sp                             0x20000458   Data           0  startup_ciu32l051.o(STACK)
 
 
 
@@ -716,98 +775,107 @@ Memory Map of the image
 
   Image Entry point : 0x080000c1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002214, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00002650, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000021dc, Max: 0x00010000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x08000000   0x08000000   0x000000c0   Data   RO         1622    RESET               startup_ciu32l051.o
-    0x080000c0   0x080000c0   0x00000000   Code   RO         1627  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
-    0x080000c0   0x080000c0   0x00000004   Code   RO         1638    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
-    0x080000c4   0x080000c4   0x00000004   Code   RO         1641    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
-    0x080000c8   0x080000c8   0x00000000   Code   RO         1643    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
-    0x080000c8   0x080000c8   0x00000000   Code   RO         1645    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
-    0x080000c8   0x080000c8   0x00000008   Code   RO         1646    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
-    0x080000d0   0x080000d0   0x00000004   Code   RO         1653    .ARM.Collect$$$$0000000E  mc_p.l(entry12b.o)
-    0x080000d4   0x080000d4   0x00000000   Code   RO         1648    .ARM.Collect$$$$0000000F  mc_p.l(entry10a.o)
-    0x080000d4   0x080000d4   0x00000000   Code   RO         1650    .ARM.Collect$$$$00000011  mc_p.l(entry11a.o)
-    0x080000d4   0x080000d4   0x00000004   Code   RO         1639    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
-    0x080000d8   0x080000d8   0x0000001c   Code   RO         1623    .text               startup_ciu32l051.o
-    0x080000f4   0x080000f4   0x0000002c   Code   RO         1630    .text               mc_p.l(uidiv.o)
-    0x08000120   0x08000120   0x00000028   Code   RO         1632    .text               mc_p.l(idiv.o)
-    0x08000148   0x08000148   0x00000024   Code   RO         1636    .text               mc_p.l(memseta.o)
-    0x0800016c   0x0800016c   0x00000024   Code   RO         1658    .text               mc_p.l(init.o)
-    0x08000190   0x08000190   0x00000058   Code   RO          424    i.DMA_Channel0_IRQHandler  adc.o
-    0x080001e8   0x080001e8   0x000000fc   Code   RO         1588    i.SystemCoreClockUpdate  system_ciu32l051.o
-    0x080002e4   0x080002e4   0x00000020   Code   RO         1589    i.SystemInit        system_ciu32l051.o
-    0x08000304   0x08000304   0x00000024   Code   RO          503    i.TIM3_adc_Enable   timer3.o
-    0x08000328   0x08000328   0x00000070   Code   RO          504    i.TIM3_init         timer3.o
-    0x08000398   0x08000398   0x00000060   Code   RO          267    i.TIM8_IRQHandler   timer8.o
-    0x080003f8   0x080003f8   0x00000058   Code   RO          268    i.TIM8_init         timer8.o
-    0x08000450   0x08000450   0x0000001c   Code   RO          405    i.__ARM_common_switch8  lcd.o
-    0x0800046c   0x0800046c   0x00000018   Code   RO          232    i.__NVIC_EnableIRQ  nivc.o
-    0x08000484   0x08000484   0x00000078   Code   RO          233    i.__NVIC_SetPriority  nivc.o
-    0x080004fc   0x080004fc   0x00000078   Code   RO          425    i.__NVIC_SetPriority  adc.o
-    0x08000574   0x08000574   0x0000000e   Code   RO         1662    i.__scatterload_copy  mc_p.l(handlers.o)
-    0x08000582   0x08000582   0x00000002   Code   RO         1663    i.__scatterload_null  mc_p.l(handlers.o)
-    0x08000584   0x08000584   0x0000000e   Code   RO         1664    i.__scatterload_zeroinit  mc_p.l(handlers.o)
-    0x08000592   0x08000592   0x00000002   PAD
-    0x08000594   0x08000594   0x000000d8   Code   RO          426    i.adc_init          adc.o
-    0x0800066c   0x0800066c   0x0000002c   Code   RO          427    i.bsp_adc_dma_config  adc.o
-    0x08000698   0x08000698   0x00000024   Code   RO          269    i.bsp_tim8_start    timer8.o
-    0x080006bc   0x080006bc   0x00000084   Code   RO          428    i.dma_init          adc.o
-    0x08000740   0x08000740   0x00000098   Code   RO          312    i.gpio_init         gpio.o
-    0x080007d8   0x080007d8   0x00000060   Code   RO          335    i.lcd_clock_config  lcd.o
-    0x08000838   0x08000838   0x000000b4   Code   RO          336    i.lcd_config_init   lcd.o
-    0x080008ec   0x080008ec   0x00000038   Code   RO          337    i.lcd_show_all      lcd.o
-    0x08000924   0x08000924   0x00000354   Code   RO          338    i.lcd_show_humidity  lcd.o
-    0x08000c78   0x08000c78   0x00000874   Code   RO          339    i.lcd_show_mid_num  lcd.o
-    0x080014ec   0x080014ec   0x00000538   Code   RO          340    i.lcd_show_temperature  lcd.o
-    0x08001a24   0x08001a24   0x00000054   Code   RO          341    i.lcd_write_to_RAM  lcd.o
-    0x08001a78   0x08001a78   0x00000044   Code   RO            3    i.led_init          led.o
-    0x08001abc   0x08001abc   0x000000cc   Code   RO          174    i.main              main.o
-    0x08001b88   0x08001b88   0x00000020   Code   RO          234    i.nvic_init         nivc.o
-    0x08001ba8   0x08001ba8   0x000000c0   Code   RO          590    i.std_adc_init      ciu32l051_std_adc.o
-    0x08001c68   0x08001c68   0x00000018   Code   RO          592    i.std_adc_trig_edge_config  ciu32l051_std_adc.o
-    0x08001c80   0x08001c80   0x00000020   Code   RO          538    i.std_delay_init    ciu32l051_std.o
-    0x08001ca0   0x08001ca0   0x00000044   Code   RO          541    i.std_delayus       ciu32l051_std.o
-    0x08001ce4   0x08001ce4   0x0000005c   Code   RO          752    i.std_dma_init      ciu32l051_std_dma.o
-    0x08001d40   0x08001d40   0x00000010   Code   RO          753    i.std_dma_set_dst_address  ciu32l051_std_dma.o
-    0x08001d50   0x08001d50   0x00000010   Code   RO          754    i.std_dma_set_src_address  ciu32l051_std_dma.o
-    0x08001d60   0x08001d60   0x00000010   Code   RO          755    i.std_dma_set_transfer_data_number  ciu32l051_std_dma.o
-    0x08001d70   0x08001d70   0x0000003c   Code   RO          756    i.std_dma_start_transmit  ciu32l051_std_dma.o
-    0x08001dac   0x08001dac   0x00000070   Code   RO          907    i.std_gpio_init     ciu32l051_std_gpio.o
-    0x08001e1c   0x08001e1c   0x00000024   Code   RO          908    i.std_gpio_set_afpin_0_7  ciu32l051_std_gpio.o
-    0x08001e40   0x08001e40   0x0000002a   Code   RO          909    i.std_gpio_set_afpin_8_15  ciu32l051_std_gpio.o
-    0x08001e6a   0x08001e6a   0x0000001a   Code   RO          910    i.std_gpio_set_pin_mode  ciu32l051_std_gpio.o
-    0x08001e84   0x08001e84   0x00000010   Code   RO          911    i.std_gpio_set_pin_output_type  ciu32l051_std_gpio.o
-    0x08001e94   0x08001e94   0x0000001a   Code   RO          912    i.std_gpio_set_pin_pull  ciu32l051_std_gpio.o
-    0x08001eae   0x08001eae   0x00000002   PAD
-    0x08001eb0   0x08001eb0   0x00000014   Code   RO         1009    i.std_lcd_disable   ciu32l051_std_lcd.o
-    0x08001ec4   0x08001ec4   0x00000018   Code   RO         1010    i.std_lcd_get_flag  ciu32l051_std_lcd.o
-    0x08001edc   0x08001edc   0x00000070   Code   RO         1011    i.std_lcd_init      ciu32l051_std_lcd.o
-    0x08001f4c   0x08001f4c   0x0000001c   Code   RO          342    i.std_lcd_write     lcd.o
-    0x08001f68   0x08001f68   0x00000018   Code   RO          343    i.std_rcc_apb1_clk_enable  lcd.o
-    0x08001f80   0x08001f80   0x00000018   Code   RO          429    i.std_rcc_apb2_clk_enable  adc.o
-    0x08001f98   0x08001f98   0x0000004c   Code   RO         1420    i.std_tim_init      ciu32l051_std_tim.o
-    0x08001fe4   0x08001fe4   0x000000fc   Code   RO          204    i.system_clock_config  ssc.o
-    0x080020e0   0x080020e0   0x0000009c   Code   RO          430    i.vrefbuf_init      adc.o
-    0x0800217c   0x0800217c   0x00000040   Data   RO         1590    .constdata          system_ciu32l051.o
-    0x080021bc   0x080021bc   0x00000020   Data   RO         1660    Region$$Table       anon$$obj.o
-
-
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080021dc, Size: 0x00000438, Max: 0x00004000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000025f8, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080021dc   0x00000005   Data   RW          176    .data               main.o
-    0x20000005   0x080021e1   0x00000002   Data   RW          271    .data               timer8.o
-    0x20000007   0x080021e3   0x00000001   PAD
-    0x20000008   0x080021e4   0x00000028   Data   RW          345    .data               lcd.o
-    0x20000030   0x0800220c   0x00000004   Data   RW          432    .data               adc.o
-    0x20000034   0x08002210   0x00000004   Data   RW         1591    .data               system_ciu32l051.o
-    0x20000038        -       0x00000400   Zero   RW         1620    STACK               startup_ciu32l051.o
+    0x08000000   0x08000000   0x000000c0   Data   RO         1701    RESET               startup_ciu32l051.o
+    0x080000c0   0x080000c0   0x00000000   Code   RO         1706  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x080000c0   0x080000c0   0x00000004   Code   RO         1717    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x080000c4   0x080000c4   0x00000004   Code   RO         1720    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         1722    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x080000c8   0x080000c8   0x00000000   Code   RO         1724    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x080000c8   0x080000c8   0x00000008   Code   RO         1725    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x080000d0   0x080000d0   0x00000004   Code   RO         1732    .ARM.Collect$$$$0000000E  mc_p.l(entry12b.o)
+    0x080000d4   0x080000d4   0x00000000   Code   RO         1727    .ARM.Collect$$$$0000000F  mc_p.l(entry10a.o)
+    0x080000d4   0x080000d4   0x00000000   Code   RO         1729    .ARM.Collect$$$$00000011  mc_p.l(entry11a.o)
+    0x080000d4   0x080000d4   0x00000004   Code   RO         1718    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x080000d8   0x080000d8   0x0000001c   Code   RO         1702    .text               startup_ciu32l051.o
+    0x080000f4   0x080000f4   0x0000002c   Code   RO         1709    .text               mc_p.l(uidiv.o)
+    0x08000120   0x08000120   0x00000028   Code   RO         1711    .text               mc_p.l(idiv.o)
+    0x08000148   0x08000148   0x00000024   Code   RO         1715    .text               mc_p.l(memseta.o)
+    0x0800016c   0x0800016c   0x00000024   Code   RO         1737    .text               mc_p.l(init.o)
+    0x08000190   0x08000190   0x00000058   Code   RO          429    i.DMA_Channel0_IRQHandler  adc.o
+    0x080001e8   0x080001e8   0x000000fc   Code   RO         1667    i.SystemCoreClockUpdate  system_ciu32l051.o
+    0x080002e4   0x080002e4   0x00000020   Code   RO         1668    i.SystemInit        system_ciu32l051.o
+    0x08000304   0x08000304   0x00000024   Code   RO          518    i.TIM3_adc_Enable   timer3.o
+    0x08000328   0x08000328   0x00000070   Code   RO          519    i.TIM3_init         timer3.o
+    0x08000398   0x08000398   0x000000ac   Code   RO          266    i.TIM8_IRQHandler   timer8.o
+    0x08000444   0x08000444   0x00000058   Code   RO          267    i.TIM8_init         timer8.o
+    0x0800049c   0x0800049c   0x0000001c   Code   RO          410    i.__ARM_common_switch8  lcd.o
+    0x080004b8   0x080004b8   0x00000018   Code   RO          231    i.__NVIC_EnableIRQ  nivc.o
+    0x080004d0   0x080004d0   0x00000078   Code   RO          232    i.__NVIC_SetPriority  nivc.o
+    0x08000548   0x08000548   0x00000078   Code   RO          430    i.__NVIC_SetPriority  adc.o
+    0x080005c0   0x080005c0   0x0000000e   Code   RO         1741    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x080005ce   0x080005ce   0x00000002   Code   RO         1742    i.__scatterload_null  mc_p.l(handlers.o)
+    0x080005d0   0x080005d0   0x0000000e   Code   RO         1743    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x080005de   0x080005de   0x00000002   PAD
+    0x080005e0   0x080005e0   0x000000c8   Code   RO          431    i.adc_init          adc.o
+    0x080006a8   0x080006a8   0x000001bc   Code   RO          552    i.app_LCD_Control   app.o
+    0x08000864   0x08000864   0x00000078   Code   RO          553    i.app_LED_Control   app.o
+    0x080008dc   0x080008dc   0x00000098   Code   RO          554    i.app_Status_Control  app.o
+    0x08000974   0x08000974   0x00000054   Code   RO          555    i.app_get_adc_data_process  app.o
+    0x080009c8   0x080009c8   0x000000f0   Code   RO          556    i.app_value_convert  app.o
+    0x08000ab8   0x08000ab8   0x0000002c   Code   RO          432    i.bsp_adc_dma_config  adc.o
+    0x08000ae4   0x08000ae4   0x00000024   Code   RO          268    i.bsp_tim8_start    timer8.o
+    0x08000b08   0x08000b08   0x00000084   Code   RO          433    i.dma_init          adc.o
+    0x08000b8c   0x08000b8c   0x00000098   Code   RO          311    i.gpio_init         gpio.o
+    0x08000c24   0x08000c24   0x00000060   Code   RO          334    i.lcd_clock_config  lcd.o
+    0x08000c84   0x08000c84   0x000000b4   Code   RO          335    i.lcd_config_init   lcd.o
+    0x08000d38   0x08000d38   0x00000038   Code   RO          336    i.lcd_show_all      lcd.o
+    0x08000d70   0x08000d70   0x00000354   Code   RO          338    i.lcd_show_humidity  lcd.o
+    0x080010c4   0x080010c4   0x00000874   Code   RO          339    i.lcd_show_mid_num  lcd.o
+    0x08001938   0x08001938   0x00000538   Code   RO          340    i.lcd_show_temperature  lcd.o
+    0x08001e70   0x08001e70   0x00000054   Code   RO          341    i.lcd_write_to_RAM  lcd.o
+    0x08001ec4   0x08001ec4   0x00000044   Code   RO            3    i.led_init          led.o
+    0x08001f08   0x08001f08   0x00000060   Code   RO          178    i.main              main.o
+    0x08001f68   0x08001f68   0x00000020   Code   RO          233    i.nvic_init         nivc.o
+    0x08001f88   0x08001f88   0x00000024   Code   RO          434    i.std_adc_channel_sample_time_select  adc.o
+    0x08001fac   0x08001fac   0x00000010   Code   RO          435    i.std_adc_fix_sequence_channel_enable  adc.o
+    0x08001fbc   0x08001fbc   0x000000c0   Code   RO          669    i.std_adc_init      ciu32l051_std_adc.o
+    0x0800207c   0x0800207c   0x00000018   Code   RO          671    i.std_adc_trig_edge_config  ciu32l051_std_adc.o
+    0x08002094   0x08002094   0x00000020   Code   RO          617    i.std_delay_init    ciu32l051_std.o
+    0x080020b4   0x080020b4   0x00000044   Code   RO          620    i.std_delayus       ciu32l051_std.o
+    0x080020f8   0x080020f8   0x0000005c   Code   RO          831    i.std_dma_init      ciu32l051_std_dma.o
+    0x08002154   0x08002154   0x00000010   Code   RO          832    i.std_dma_set_dst_address  ciu32l051_std_dma.o
+    0x08002164   0x08002164   0x00000010   Code   RO          833    i.std_dma_set_src_address  ciu32l051_std_dma.o
+    0x08002174   0x08002174   0x00000010   Code   RO          834    i.std_dma_set_transfer_data_number  ciu32l051_std_dma.o
+    0x08002184   0x08002184   0x0000003c   Code   RO          835    i.std_dma_start_transmit  ciu32l051_std_dma.o
+    0x080021c0   0x080021c0   0x00000070   Code   RO          986    i.std_gpio_init     ciu32l051_std_gpio.o
+    0x08002230   0x08002230   0x00000004   Code   RO          557    i.std_gpio_reset_pin  app.o
+    0x08002234   0x08002234   0x00000024   Code   RO          987    i.std_gpio_set_afpin_0_7  ciu32l051_std_gpio.o
+    0x08002258   0x08002258   0x0000002a   Code   RO          988    i.std_gpio_set_afpin_8_15  ciu32l051_std_gpio.o
+    0x08002282   0x08002282   0x00000004   Code   RO          558    i.std_gpio_set_pin  app.o
+    0x08002286   0x08002286   0x0000001a   Code   RO          989    i.std_gpio_set_pin_mode  ciu32l051_std_gpio.o
+    0x080022a0   0x080022a0   0x00000010   Code   RO          990    i.std_gpio_set_pin_output_type  ciu32l051_std_gpio.o
+    0x080022b0   0x080022b0   0x0000001a   Code   RO          991    i.std_gpio_set_pin_pull  ciu32l051_std_gpio.o
+    0x080022ca   0x080022ca   0x00000002   PAD
+    0x080022cc   0x080022cc   0x00000014   Code   RO         1088    i.std_lcd_disable   ciu32l051_std_lcd.o
+    0x080022e0   0x080022e0   0x00000018   Code   RO         1089    i.std_lcd_get_flag  ciu32l051_std_lcd.o
+    0x080022f8   0x080022f8   0x00000070   Code   RO         1090    i.std_lcd_init      ciu32l051_std_lcd.o
+    0x08002368   0x08002368   0x0000001c   Code   RO          342    i.std_lcd_write     lcd.o
+    0x08002384   0x08002384   0x00000018   Code   RO          343    i.std_rcc_apb1_clk_enable  lcd.o
+    0x0800239c   0x0800239c   0x00000018   Code   RO          436    i.std_rcc_apb2_clk_enable  adc.o
+    0x080023b4   0x080023b4   0x0000004c   Code   RO         1499    i.std_tim_init      ciu32l051_std_tim.o
+    0x08002400   0x08002400   0x000000fc   Code   RO          203    i.system_clock_config  ssc.o
+    0x080024fc   0x080024fc   0x0000009c   Code   RO          437    i.vrefbuf_init      adc.o
+    0x08002598   0x08002598   0x00000040   Data   RO         1669    .constdata          system_ciu32l051.o
+    0x080025d8   0x080025d8   0x00000020   Data   RO         1739    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080025f8, Size: 0x00000458, Max: 0x00004000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x080025f8   0x00000008   Data   RW          270    .data               timer8.o
+    0x20000008   0x08002600   0x00000028   Data   RW          345    .data               lcd.o
+    0x20000030   0x08002628   0x00000006   Data   RW          439    .data               adc.o
+    0x20000036   0x0800262e   0x00000002   PAD
+    0x20000038   0x08002630   0x0000001c   Data   RW          560    .data               app.o
+    0x20000054   0x0800264c   0x00000004   Data   RW         1670    .data               system_ciu32l051.o
+    0x20000058        -       0x00000400   Zero   RW         1699    STACK               startup_ciu32l051.o
 
 
 ==============================================================================
@@ -817,7 +885,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       780         76          0          4          0      46326   adc.o
+       816         84          0          6          0      47174   adc.o
+      1048        146          0         28          0       9909   app.o
        100         18          0          0          0       1191   ciu32l051_std.o
        216         10          0          0          0      10595   ciu32l051_std_adc.o
        200         28          0          0          0       8620   ciu32l051_std_dma.o
@@ -827,18 +896,18 @@ Image component sizes
        152         22          0          0          0        736   gpio.o
       4848        292          0         40          0      34032   lcd.o
         68          8          0          0          0     204371   led.o
-       204         40          0          5          0       6159   main.o
+        96          0          0          0          0        563   main.o
        176         16          0          0          0       9500   nivc.o
        252         12          0          0          0      20898   ssc.o
         28          8        192          0       1024        652   startup_ciu32l051.o
        284         40         64          4          0       2608   system_ciu32l051.o
        148         30          0          0          0      21862   timer3.o
-       220         34          0          2          0      30058   timer8.o
+       296         50          0          8          0      30231   timer8.o
 
     ----------------------------------------------------------------------
-      8168        662        288         56       1024     430818   Object Totals
+      9220        792        288         88       1024     436152   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         2          0          0          1          0          0   (incl. Padding)
+         2          0          0          2          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -879,15 +948,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      8380        678        288         56       1024     429126   Grand Totals
-      8380        678        288         56       1024     429126   ELF Image Totals
-      8380        678        288         56          0          0   ROM Totals
+      9432        808        288         88       1024     434108   Grand Totals
+      9432        808        288         88       1024     434108   ELF Image Totals
+      9432        808        288         88          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 8668 (   8.46kB)
-    Total RW  Size (RW Data + ZI Data)              1080 (   1.05kB)
-    Total ROM Size (Code + RO Data + RW Data)       8724 (   8.52kB)
+    Total RO  Size (Code + RO Data)                 9720 (   9.49kB)
+    Total RW  Size (RW Data + ZI Data)              1112 (   1.09kB)
+    Total ROM Size (Code + RO Data + RW Data)       9808 (   9.58kB)
 
 ==============================================================================
 

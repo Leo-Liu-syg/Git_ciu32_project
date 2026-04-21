@@ -1,7 +1,5 @@
 #include "main.h"
 
-__IO uint32_t g_get_voltage; // adc-??3-PA4????
-unsigned char test_Hello_baby = 0;
 int main(void)
 {
     /*????*/
@@ -39,23 +37,13 @@ int main(void)
     lcd_show_mid_num(1234);
 #endif
 #ifdef CO_test
-    g_get_voltage = 3333;
+    Get_CO_Voltage = 3333;
 #endif
-
     while (1)
     {
-        if (tim8_500ms_flag) // ??TIM8??????
-        {
-            tim8_500ms_flag = 0; // ????
-            /* ?????TIM8?????????LED */
-            LED_RED_FLIP();
-        }
-        if (g_adc_complete == 0x01U)
-        {
-            g_adc_complete = 0x0U;
-            test_Hello_baby = 1;
-            /* ????????,g_dma_result????2????? */
-            g_get_voltage = (g_dma_result * VREFBUF_VOLTAGE_3000_REF) / ADC_CONVER_SCALE;
-        }
+        app_Status_Control();
+        app_LED_Control();
+        app_LCD_Control();
+        app_get_adc_data_process();
     }
 }

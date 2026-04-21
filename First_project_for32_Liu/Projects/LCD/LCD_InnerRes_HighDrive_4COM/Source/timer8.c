@@ -20,26 +20,37 @@ void TIM8_init(void)
     std_tim_init(TIM8, &basic_init_struct);
 }
 
-
 /**
  * @brief  TIM8中断服务程序
  * @retval 无
  */
 unsigned char tim8_500ms_count = 0; // 定义一个计数器变量，用于计数TIM8更新事件的发生次数
-unsigned char tim8_500ms_flag = 0; // 定义一个标志变量，用于指示TIM8更新事件发生
+unsigned char tim8_500ms_flag = 0;  // 定义一个标志变量，用于指示TIM8更新事件发生
+unsigned char tim8_1s_count = 0;    // 定义一个计数器变量，用于计数TIM8更新事件的发生次数
+unsigned char tim8_1s_flag = 0;     // 定义一个标志变量，用于指示TIM8更新事件发生
+unsigned int tim8_wait = 0;         // 定义一个等待变量，用于控制TIM8中断处理的频率
 void TIM8_IRQHandler(void)
 {
     /* TIM8更新中断处理流程 */
     if ((std_tim_get_interrupt_enable(TIM8, TIM_INTERRUPT_UPDATE)) && (std_tim_get_flag(TIM8, TIM_FLAG_UPDATE)))
     {
-        tim8_500ms_count++; // 每次TIM8更新事件发生时，计数器加1
-        if(tim8_500ms_count >= 50) // 当计数器达到50时，表示已经发生了500ms的时间（假设TIM8的更新事件频率为100Hz）
+        tim8_1s_count++;          // 每次TIM8更新事件发生时，计数器加1
+        if (tim8_1s_count >= 100) // 当计数器达到
         {
-            tim8_500ms_count = 0; // 重置计数器
-            tim8_500ms_flag = 1; // 设置标志变量，表示TIM8更新事件发生
+            tim8_1s_count = 0;            // 重置计数器
+            tim8_1s_flag = ~tim8_1s_flag; // 翻转标志变量，指示TIM8更新事件发生
         }
-
-
+        tim8_500ms_count++;         // 每次TIM8更新事件发生时，计数器加1
+        if (tim8_500ms_count >= 50) // 当计数器达到50时，表示已经发生了500ms的时间（TIM8的更新事件频率为100Hz）
+        {
+            tim8_500ms_count = 0;               // 重置计数器
+            tim8_500ms_flag = ~tim8_500ms_flag; // 翻转标志变量，指示TIM8更新事件发生
+            Running_LCD_Flag = 1;
+        }
+        if (tim8_wait) // 如果等待变量不为0，表示正在等待下一次TIM8更新事件的发生
+        {
+            tim8_wait--;
+        }
         std_tim_clear_flag(TIM8, TIM_FLAG_UPDATE);
         /* TIM8处理定时中断 */
     }

@@ -22,5 +22,6 @@ void lcd_show_all(void);
 void lcd_show_temperature(uint16_t Temp_value);
 void lcd_show_humidity(uint16_t Hum_vlaue);
 void lcd_show_mid_num(uint32_t Mid_vlaue);
+void lcd_show_data(uint32_t Mid_vlaue, uint16_t Temp_value, uint16_t Hum_vlaue);
 
 #endif

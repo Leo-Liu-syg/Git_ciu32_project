@@ -37,12 +37,12 @@
 // 5.4 湿度显示函数 lcd_show_humidity(uint8_t humidity)
 //5.5 其他功能函数
 //6. 实现语音播放函数 voice_play(uint8_t voice_id)---没有语音模块，暂时无法测试，先预留接口
-7. adc功能 参考adc例程 
-7.1 初始化函数 adc_init
-7.2 读取adc值函数 adc_read(uint8_t channel)
-7.3 读co电压函数 adc_read_co(void)
-7.4 读smoke电压函数 adc_read_smoke(void)
-7.5 读电池电压函数 adc_read_battery(void)
+// 7. adc功能 参考adc例程 
+// 7.1 初始化函数 adc_init
+// 7.2 读取adc值函数 adc_read(uint8_t channel)
+// 7.3 读co电压函数 adc_read_co(void)
+// 7.4 读smoke电压函数 adc_read_smoke(void)
+// 7.5 读电池电压函数 adc_read_battery(void)
 8. 温湿度传感器功能
 8.1 读取温湿度传感器数据函数 dht_read_data(void) -> 设置两个全局变量 temperature 和 humidity
 8.2 读取温度接口函数 uint8_t dht_read_temperature(void) -> 返回温度值
