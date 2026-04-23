@@ -8,6 +8,7 @@
 
 #include "ciu32l051_std.h"
 #include "stdio.h"
+#include <string.h>
 
 #include "adc.h"
 #include "gpio.h"
@@ -18,5 +19,8 @@
 #include "timer3.h"
 #include "timer8.h"
 #include "app.h"
+#include <string.h>
+
+
 
 #endif /* __MAIN_H */

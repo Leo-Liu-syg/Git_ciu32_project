@@ -26,6 +26,8 @@ int main(void)
     lcd_config_init();
     lcd_show_all();
 
+    /*Flash*/
+    Flash_Read_Voltage(&adc_co_calibration_value);
 /*ºê¿ª¹Ø²âÊÔ*/
 #ifdef Temp_test
     lcd_show_temperature(25);

@@ -8,19 +8,14 @@ __IO uint32_t Get_Smoke_Zero;    // adc-??1-PA2????
 __IO unsigned int ppm_co = 0;    // CO浓度，单位PPM
 __IO unsigned int dbm_somke = 0; // 烟雾浓度，单位db/m
 
+unsigned int adc_co_calibration_value = 0xffffffff; // 假定一个校准值186，实际应用中应通过标定过程获得
 unsigned char test_Hello_baby = 0;
 
 unsigned char Running_LCD_count_60s = 60; // LCD控制
-unsigned char Running_LCD_Flag=1;
+unsigned char Running_LCD_Flag = 1;
 
-typedef enum
-{
-    Status_IDLE = 0,   // 初始待机状态（未启动流程）
-    Status_SELF_CHECK, // 传感器整体硬件自检（ADC/供电/通信）
-    Status_CAL,        // 自检完成（判断是否通过）
-    Status_RUNNING,    // 正常运行状态（实时采集/转换值）
-    Status_ERROR       // 异常状态（自检/标定失败，需处理）
-} App_status;
+
+App_status Status = Status_IDLE; // 全局变量，记录当前应用状态
 
 void app_get_adc_data_process(void)
 {
@@ -34,7 +29,7 @@ void app_get_adc_data_process(void)
 
 void app_value_convert(void)
 {
-    unsigned int adc_co_calibration_value = 186; // 假定一个校准值，实际应用中应通过标定过程获得
+    adc_co_calibration_value = 186; // 假定一个校准值，实际应用中应通过标定过程获得
     if (Get_CO_Voltage > Get_CO_Zero)
     {
         ppm_co = (Get_CO_Voltage - Get_CO_Zero) * 200 / adc_co_calibration_value; // 计算CO浓度，假设2000PPM对应adc_co_calibration_value的电压差值
@@ -74,7 +69,7 @@ void app_value_convert(void)
     // }
 }
 
-App_status Status = Status_IDLE; // 全局变量，记录当前应用状态
+
 void app_Status_Control(void)
 {
     if (tim8_wait) // 如果等待变量不为0，表示正在等待下一次TIM8更新事件的发生
@@ -87,35 +82,25 @@ void app_Status_Control(void)
     {
     case Status_IDLE: // 空闲,检查是否有flash数据，如果有，直接使用数据并进入正常工作状态
         Status = Status_SELF_CHECK;
-        tim8_wait = 2000; // 等待10秒钟，模拟自检准备过程
+        tim8_wait = 1000; // 等待10秒钟，模拟自检准备过程
         break;
-
-        /*1. LCD全显一次、语音播放一次报警语音“呜呜”、红色LED闪烁1S亮灭,LCD显示’-----’，持续3分钟
-          2.1 3分钟后CO电压范围在0.1V-0.9V之间为正常，自检成功LED常亮可以进入标定状态，保存当前CO电压为V0CO
-          2.2 3分钟后CO电压范围不在0.1V-0.9V之间为异常，LED持续闪烁
-          3. 工人注入200PPM CO气体，当CO电压升高0.15V时进入标定状态*/
     case Status_SELF_CHECK:
         if (Get_CO_Voltage > 100 && Get_CO_Voltage < 900 && Get_Smoke_Voltage > 100) // 简单的自检条件
         {
             Get_CO_Zero = Get_CO_Voltage;
             Get_Smoke_Zero = Get_Smoke_Voltage;
-            tim8_wait = 3000; // 等待30秒钟，模拟自检过程
+            tim8_wait = 1000; // 等待30秒钟，模拟自检过程
             Status = Status_CAL;
+            break;
         }
         break;
-
-        /*4. 标定状态下红色LED熄灭，背光500ms亮灭灯闪烁，180S后标定完成，保存当前CO电压为V1CO，保存V1CO-V0CO做报警使用（需要满足CO电压升高0.15V以上，否则标定失败，黄灯常亮）
-          5.标定成功后，红灯和黄灯交替闪烁1S亮灭一次，进入正常监控状态*/
     case Status_CAL:
-        Status = Status_RUNNING;
-
-        /*正常上电（已标定，flash里面有自检标定数据）：
-    1. 上电播放“发0x18播放语音：CO+GAS+somke开机语音”
-    2. LCD全显一秒钟、语音播放一次报警语音“呜呜”。之后三个LED闪烁1S亮灭,LCD显示’倒计时秒数’，持续3分钟
-    3. 倒计时结束的时候，读当前CO电压为V0CO，当前smoke电压差值为V0SMOKE*/
-    case Status_RUNNING:
-
+        adc_co_calibration_value=186;
+        Flash_Write_CO_Voltage();//写入flash
+		Status = Status_RUNNING;
         break;
+      case Status_RUNNING:
+      break;  
     case Status_ERROR:
 
         break;
@@ -146,15 +131,28 @@ void app_LED_Control(void)
         LED_RED_LOW();
         break;
     case Status_RUNNING:
-        if (tim8_1s_flag) // 红色LED闪烁1S亮灭
+        if (tim8_500ms_flag && Running_LCD_count_60s > 0)
         {
             LED_RED_HIGH();
+            break;//执行一次就退出
         }
-        else
-        {
+        if((!tim8_500ms_flag) && Running_LCD_count_60s > 0)
+        {   
             LED_RED_LOW();
+            break;
         }
-        break;
+        if (Running_LCD_count_60s <= 0)
+        {
+            if(tim8_1s_flag)
+            {
+                LED_RED_HIGH();
+            }
+            else
+            {
+                LED_RED_LOW();
+            }
+        }
+            break;
     default:
         break;
     }
@@ -192,7 +190,7 @@ void app_LCD_Control(void)
         lcd_show_humidity(30);
         break;
     case Status_CAL:
-        Status = Status_RUNNING;
+        
         break;
     case Status_RUNNING: // 60s倒计时
         if (tim8_500ms_flag && Running_LCD_count_60s > 0 && Running_LCD_Flag)

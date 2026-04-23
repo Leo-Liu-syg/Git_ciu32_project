@@ -42,12 +42,12 @@
 // 7.2 读取adc值函数 adc_read(uint8_t channel)
 // 7.3 读co电压函数 adc_read_co(void)
 // 7.4 读smoke电压函数 adc_read_smoke(void)
-// 7.5 读电池电压函数 adc_read_battery(void)
+7.5 读电池电压函数 adc_read_battery(void)
 8. 温湿度传感器功能
 8.1 读取温湿度传感器数据函数 dht_read_data(void) -> 设置两个全局变量 temperature 和 humidity
 8.2 读取温度接口函数 uint8_t dht_read_temperature(void) -> 返回温度值
 8.3 读取湿度接口函数 uint8_t dht_read_humidity(void) -> 返回湿度值
 9. 参考flash例程，实现flash功能
-9.1 读取flash数据函数 flash_read_data(uint8_t *data, uint16_t address, uint16_t length)
-9.2 写入flash数据函数 flash_write_data(uint8_t *data, uint16_t address, uint16_t length)
+// 9.1 读取flash数据函数 flash_read_data(uint8_t *data, uint16_t address, uint16_t length)
+// 9.2 写入flash数据函数 flash_write_data(uint8_t *data, uint16_t address, uint16_t length)
 10. app.c 主程序
