@@ -24,6 +24,8 @@ void TIM8_init(void)
  * @brief  TIM8中断服务程序
  * @retval 无
  */
+unsigned char tim8_250ms_count = 0;
+unsigned char tim8_250ms_flag = 0;
 unsigned char tim8_500ms_count = 0; // 定义一个计数器变量，用于计数TIM8更新事件的发生次数
 unsigned char tim8_500ms_flag = 0;  // 定义一个标志变量，用于指示TIM8更新事件发生
 unsigned char tim8_1s_count = 0;    // 定义一个计数器变量，用于计数TIM8更新事件的发生次数
@@ -47,6 +49,13 @@ void TIM8_IRQHandler(void)
             tim8_500ms_flag = ~tim8_500ms_flag; // 翻转标志变量，指示TIM8更新事件发生
             Running_LCD_Flag = 1;
         }
+        tim8_250ms_count++;
+        if (tim8_250ms_count >= 25)
+        {
+            tim8_250ms_count = 0;
+            tim8_250ms_flag = ~tim8_250ms_flag;
+        }
+
         if (tim8_wait) // 如果等待变量不为0，表示正在等待下一次TIM8更新事件的发生
         {
             tim8_wait--;

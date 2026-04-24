@@ -26,26 +26,43 @@ int main(void)
     lcd_config_init();
     lcd_show_all();
 
+    app_get_adc_data_process();
     /*Flash*/
-    Flash_Read_Voltage(&adc_co_calibration_value);
+    Flash_Read_Voltage_Check(&adc_co_calibration_value);
 /*ºê¿ª¹Ø²âÊÔ*/
 #ifdef Temp_test
     lcd_show_temperature(25);
 #endif
+
 #ifdef Hum_test
     lcd_show_humidity(50);
 #endif
+
 #ifdef Mid_test
     lcd_show_mid_num(1234);
 #endif
+
 #ifdef CO_test
     Get_CO_Voltage = 3333;
 #endif
+
+#ifdef QUICK_RUN
+    Running_LCD_counter = 20;
+#else
+    Running_LCD_counter = 60;
+#endif
     while (1)
     {
+
         app_Status_Control();
         app_LED_Control();
         app_LCD_Control();
-        app_get_adc_data_process();
+        if (tim8_500ms_flag)
+        {
+            app_get_adc_data_process();
+            GXHTC3_read();
+            lcd_show_temperature(temperature_S);
+            lcd_show_humidity(humidity);
+        }
     }
 }

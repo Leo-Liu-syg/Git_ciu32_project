@@ -12,7 +12,8 @@
 #define FLASH_ERASE_PROGRAM_ADDR (FLASH_MEM_BASE + (FLASH_PAGE_NUM * 0x200)) /* Flash²ÁÐ´ÆðÊ¼µØÖ·£º0x08006000 */
 #define DEFAULT_VOLTAGE_VAL 0xffffffff
 void Flash_Write_CO_Voltage(void);
-void Flash_Read_Voltage(unsigned int *p_co_volt);
+void Flash_Read_Voltage_Check(unsigned int *p_co_volt);
+unsigned int Flash_get_Value(unsigned int *p_co_volt);
 
 
 #endif /* MAIN_H */

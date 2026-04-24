@@ -9,6 +9,7 @@ extern __IO uint32_t Get_CO_Zero;       // adc-??3-PA4????
 extern __IO uint32_t Get_Smoke_Zero;    // adc-??1-
 extern unsigned char Running_LCD_Flag;
 extern unsigned int adc_co_calibration_value;
+extern unsigned char Running_LCD_counter; // LCD控制
 typedef enum
 {
     Status_IDLE = 0,   // 初始待机状态（未启动流程）

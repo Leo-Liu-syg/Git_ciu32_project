@@ -31,6 +31,9 @@ void gpio_init(void)
     /* ADC_IN2输入通道配置：PA4 */
     gpio_config.pin = GPIO_PIN_4;
     gpio_config.mode = GPIO_MODE_ANALOG;
+    /* ADC_IN1输入通道配置：PA2 */
+    gpio_config.pin = GPIO_PIN_2;
+    gpio_config.mode = GPIO_MODE_ANALOG;
     std_gpio_init(GPIOA, &gpio_config);
     
     // /* VREFBUF输出引脚：PA0 */

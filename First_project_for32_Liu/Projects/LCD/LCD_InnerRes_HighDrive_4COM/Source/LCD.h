@@ -10,9 +10,7 @@ extern uint32_t com4;
 extern uint32_t com5;
 
 extern uint32_t mid_num;
-extern uint32_t temperature;
-extern uint8_t temperature_low;
-extern uint32_t humidity;
+
 
 void lcd_clock_config(void);
 void lcd_config_init(void);
@@ -23,5 +21,7 @@ void lcd_show_temperature(uint16_t Temp_value);
 void lcd_show_humidity(uint16_t Hum_vlaue);
 void lcd_show_mid_num(uint32_t Mid_vlaue);
 void lcd_show_data(uint32_t Mid_vlaue, uint16_t Temp_value, uint16_t Hum_vlaue);
+void lcd_show_dash(void);
+void lcd_mid_clear(void);
 
 #endif
