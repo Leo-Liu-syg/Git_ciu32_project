@@ -22,6 +22,15 @@
 #define GPIO_LED_R_LOW() std_gpio_reset_pin(GPIO_LED_R, PIN_LED_R)
 #define GPIO_LED_R_flip() std_gpio_toggle_pin(GPIO_LED_R, PIN_LED_R)
 
+// LED_Y 初始化在 gpio.c 中被注释，暂不启用
+/*
+#define GPIO_LED_Y GPIOA
+#define PIN_LED_Y GPIO_PIN_13
+#define GPIO_LED_Y_HIGH() std_gpio_set_pin(GPIO_LED_Y, PIN_LED_Y)
+#define GPIO_LED_Y_LOW() std_gpio_reset_pin(GPIO_LED_Y, PIN_LED_Y)
+#define GPIO_LED_Y_flip() std_gpio_toggle_pin(GPIO_LED_Y, PIN_LED_Y)
+*/
+
 /********** 分类注释：V358、IR 外设控制 GPIO 宏定义 **********/
 #define GPIO_V358 GPIOA
 #define PIN_V358 GPIO_PIN_15
@@ -57,7 +66,23 @@
 #define GPIO_IIC_SCL_LOW() std_gpio_reset_pin(GPIO_IIC, PIN_IIC_SCL)
 #define GPIO_IIC_SDA_HIGH() std_gpio_set_pin(GPIO_IIC, PIN_IIC_SDA)
 #define GPIO_IIC_SDA_LOW() std_gpio_reset_pin(GPIO_IIC, PIN_IIC_SDA)
+#define GPIO_GET_IIC_SDA() std_gpio_get_input_pin(GPIO_IIC, PIN_IIC_SDA)
 
+/********** 分类注释：ADC 模拟输入相关 GPIO 宏定义 **********/
+// VBAT 电压检测
+#define GPIO_VBAT GPIOA
+#define PIN_VBAT GPIO_PIN_3
+#define ADC_CHANNEL_VBAT ADC_CHANNEL_2
+
+// VCO 电压检测
+#define GPIO_VCO GPIOA
+#define PIN_VCO GPIO_PIN_4
+#define ADC_CHANNEL_VCO ADC_CHANNEL_3
+
+// VSMOKE 烟雾检测电压
+#define GPIO_VSMOKE GPIOA
+#define PIN_VSMOKE GPIO_PIN_2
+#define ADC_CHANNEL_VSMOKE ADC_CHANNEL_1
 
 /********** 函数声明：仅保留目标函数 **********/
 void gpio_init(void);
