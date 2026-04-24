@@ -1,11 +1,11 @@
 #ifndef __MAIN_H
 #define __MAIN_H
-/*ºê¿ª¹Ø*/
+/*å®å¼€å…³*/
 // #define Temp_test
 // #define Hum_test
 // #define Mid_test
 // #define CO_test
-#define TEST_ERROR
+// #define TEST_ERROR
 #define QUICK_RUN
 
 #include "ciu32l051_std.h"

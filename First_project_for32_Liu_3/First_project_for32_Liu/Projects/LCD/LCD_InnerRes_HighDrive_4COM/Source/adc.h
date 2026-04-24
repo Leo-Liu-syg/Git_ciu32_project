@@ -17,5 +17,5 @@ void vrefbuf_init(void);
 void DMA_Channel0_IRQHandler(void);
 void bsp_adc_dma_config(void);
 
-#endif /* ADC_BSP_H */
+#endif /* ADC_H */
 
