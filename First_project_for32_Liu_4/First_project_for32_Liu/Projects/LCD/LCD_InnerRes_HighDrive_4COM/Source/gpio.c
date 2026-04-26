@@ -37,8 +37,8 @@ void gpio_init(void)
     gpio_config.mode = GPIO_MODE_ANALOG;
     std_gpio_init(GPIOA, &gpio_config);
     
-    // /* VREFBUF参考电压引脚 PA0 已屏蔽 */
-    // adc_gpio_config.pin = GPIO_PIN_0;
-    // adc_gpio_config.mode = GPIO_MODE_ANALOG;
-    // std_gpio_init(GPIOA, &adc_gpio_config);
+    /* VREFBUF模拟输入配置 PA0*/
+    gpio_config.pin = GPIO_PIN_3;
+    gpio_config.mode = GPIO_MODE_ANALOG;
+    std_gpio_init(GPIOA, &gpio_config);
 }

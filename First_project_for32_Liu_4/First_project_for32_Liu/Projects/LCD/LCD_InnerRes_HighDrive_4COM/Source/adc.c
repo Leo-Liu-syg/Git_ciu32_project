@@ -4,7 +4,7 @@
 // ADC采集完成标志
 __IO uint8_t g_adc_complete = 0;
 // DMA采集结果缓冲区
-__IO uint16_t g_dma_result[2];
+__IO uint16_t g_dma_result[3];
 
 /*------------------------------------------- 函数实现 ------------------------------------------*/
 
@@ -30,12 +30,19 @@ void adc_init(void)
     adc_config.scan_dir = ADC_SCAN_DIR_FORWARD;          // 扫描方向：正向扫描
     std_adc_init(&adc_config);
 
-    /* 选择ADC通道1 / 通道3 */
+    /* 选择ADC通道1 / 通道2 /通道3 DMA按照通道顺序进行数据搬运*/
+
     std_adc_fix_sequence_channel_enable(ADC_CHANNEL_1); // 烟雾传感器通道
+
+    std_adc_fix_sequence_channel_enable(ADC_CHANNEL_2); // Verf通道
+
     std_adc_fix_sequence_channel_enable(ADC_CHANNEL_3); // CO传感器通道
 
-    /* 通道1 / 通道3 采样时间选择组2 */
+    /* 通道1 / 通道2 /通道3 采样时间选择组2 */
     std_adc_channel_sample_time_select(ADC_SAMPTIME_GROUP_2, ADC_CHANNEL_1);
+
+    std_adc_channel_sample_time_select(ADC_SAMPTIME_GROUP_2, ADC_CHANNEL_2);
+
     std_adc_channel_sample_time_select(ADC_SAMPTIME_GROUP_2, ADC_CHANNEL_3);
 
     /* 使能ADC DMA传输 */
@@ -151,6 +158,6 @@ void bsp_adc_dma_config(void)
     dma_config.dma_channel = DMA_CHANNEL_0;
     dma_config.src_addr = (uint32_t)&ADC->DR;
     dma_config.dst_addr = (uint32_t)&g_dma_result;
-    dma_config.data_number = 2;
+    dma_config.data_number = 3;
     std_dma_start_transmit(&dma_config);
 }

@@ -17,10 +17,10 @@ void TIM8_init(void)
     tmp_psc_value = (uint32_t)(((SystemCoreClock) / 10000) - 1);
 
     /* TIM8基本参数配置 */
-    basic_init_struct.prescaler         = tmp_psc_value;          // 预分频值
-    basic_init_struct.counter_mode     = TIM_COUNTER_MODE_UP;    // 向上计数模式
-    basic_init_struct.period           = TIM8_ARR_VALUE;         // 自动重装载值
-    basic_init_struct.clock_div        = TIM_CLOCK_DTS_DIV1;     // 时钟分频
+    basic_init_struct.prescaler = tmp_psc_value;                        // 预分频值
+    basic_init_struct.counter_mode = TIM_COUNTER_MODE_UP;               // 向上计数模式
+    basic_init_struct.period = TIM8_ARR_VALUE;                          // 自动重装载值
+    basic_init_struct.clock_div = TIM_CLOCK_DTS_DIV1;                   // 时钟分频
     basic_init_struct.auto_reload_preload = TIM_AUTORELOAD_PRE_DISABLE; // 重装载预加载使能
     std_tim_init(TIM8, &basic_init_struct);
 }
@@ -30,30 +30,44 @@ void TIM8_init(void)
  * @note   每10ms进入一次中断，用于计时250ms/500ms/1s标志
  * @retval 无
  */
-unsigned char tim8_250ms_count = 0;   // 250ms 计时计数器
-unsigned char tim8_250ms_flag  = 0;   // 250ms 时间到标志
-unsigned char tim8_500ms_count = 0;   // 500ms 计时计数器
-unsigned char tim8_500ms_flag  = 0;   // 500ms 时间到标志
-unsigned char tim8_1s_count   = 0;    // 1s 计时计数器
-unsigned char tim8_1s_flag    = 0;    // 1s 时间到标志
-unsigned int  tim8_wait       = 0;    // 软件延时计数器
+unsigned char tim8_250ms_count = 0; // 250ms 计时计数器
+unsigned char tim8_250ms_flag = 0;  // 250ms 时间到标志
+
+unsigned char tim8_500ms_count = 0; // 500ms 计时计数器
+unsigned char tim8_500ms_flag = 0;  // 500ms 时间到标志
+
+unsigned char tim8_1s_count = 0; // 1s 计时计数器
+unsigned char tim8_1s_flag = 0;  // 1s 时间到标志
+
+unsigned int tim8_5s_count = 0; // 5s计数器
+unsigned int tim8_5s_flag = 0;  // 5s时间标志
+
+unsigned int tim8_wait = 0; // 软件延时计数器
 
 void TIM8_IRQHandler(void)
 {
     /* 判断是否为TIM8更新中断 */
     if ((std_tim_get_interrupt_enable(TIM8, TIM_INTERRUPT_UPDATE)) && (std_tim_get_flag(TIM8, TIM_FLAG_UPDATE)))
     {
+        // 5s倒计时
+        tim8_5s_count++;
+        if (tim8_5s_count >= 500)
+        {
+            tim8_5s_count = 0;
+            tim8_5s_flag = ~tim8_5s_flag;
+        }
+
         // 1秒计时
         tim8_1s_count++;
-        if (tim8_1s_count >= 100)  // 0.1ms * 100 = 10ms → 你的工程里是1s
+        if (tim8_1s_count >= 100) // 10ms * 100 = 1s
         {
             tim8_1s_count = 0;
-            tim8_1s_flag = ~tim8_1s_flag;  // 翻转标志
+            tim8_1s_flag = ~tim8_1s_flag; // 翻转标志
         }
 
         // 500ms计时
         tim8_500ms_count++;
-        if (tim8_500ms_count >= 50)  // 0.1ms * 50 = 5ms → 你的工程里是500ms
+        if (tim8_500ms_count >= 50) // 500ms → 你的工程里是500ms
         {
             tim8_500ms_count = 0;
             tim8_500ms_flag = ~tim8_500ms_flag;
@@ -66,8 +80,9 @@ void TIM8_IRQHandler(void)
         {
             tim8_250ms_count = 0;
             tim8_250ms_flag = ~tim8_250ms_flag;
+            
         }
-
+        
         // 软件延时递减
         if (tim8_wait)
         {

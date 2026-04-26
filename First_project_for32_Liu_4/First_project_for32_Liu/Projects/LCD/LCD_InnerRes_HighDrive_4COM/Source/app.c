@@ -2,6 +2,7 @@
 
 // ADC通道采集电压值
 __IO uint32_t Get_CO_Voltage;    // ADC通道3 PA4采集的CO电压值
+__IO uint32_t Get_VBat_Voltage;  // ADC通道2 PA3采集的电源电压值
 __IO uint32_t Get_Smoke_Voltage; // ADC通道1 PA2采集的烟雾电压值
 
 // 零点校准值
@@ -33,7 +34,8 @@ void app_get_adc_data_process(void)
 
         // ADC原始值转换为实际电压
         Get_Smoke_Voltage = (g_dma_result[0] * VREFBUF_VOLTAGE_3000_REF) / ADC_CONVER_SCALE;
-        Get_CO_Voltage = (g_dma_result[1] * VREFBUF_VOLTAGE_3000_REF) / ADC_CONVER_SCALE;
+        Get_VBat_Voltage = (g_dma_result[1] * VREFBUF_VOLTAGE_3000_REF) / ADC_CONVER_SCALE;
+        Get_CO_Voltage = (g_dma_result[2] * VREFBUF_VOLTAGE_3000_REF) / ADC_CONVER_SCALE;
     }
 }
 
@@ -138,7 +140,7 @@ void app_Status_Control(void)
         // 校验Flash中的校准值是否正确
         if ((adc_co_calibration_value == Flash_Get_Value(Col_Address)) && Get_CO_Zero == Flash_Get_Value(Vol_Zero_Address))
         {
-                }
+        }
         else
         {
             Status = Status_ERROR; // 校验失败进入故障状态
@@ -150,11 +152,28 @@ void app_Status_Control(void)
             Status = Status_ERROR;
         }
 
+        // 电压低于某个值就进入低电压状态
+        if (Get_VBat_Voltage <= 1190)
+        {
+            Status = Status_Low_Power;
+        }
+
         break;
 
     case Status_ERROR:
         // 故障状态如果电压下降到合理值，那么切回去正常运行状态
         if (Get_CO_Voltage <= ((90 * (adc_co_calibration_value + Get_CO_Zero) / 100)))
+        {
+            Status = Status_RUNNING;
+        }
+        break;
+    case Status_Low_Power:
+        // 浓度到了某个值就触发报警
+        if (Get_CO_Voltage >= (adc_co_calibration_value + Get_CO_Zero))
+        {
+            Status = Status_ERROR;
+        }
+        if (Get_VBat_Voltage > 1500) // 阈值往上加一点
         {
             Status = Status_RUNNING;
         }
@@ -215,6 +234,18 @@ void app_LED_Control(void)
         else
             LED_RED_LOW();
         break;
+
+    case Status_Low_Power:
+
+        if (tim8_5s_count >= 470)
+        {
+            LED_RED_HIGH(); // 红灯亮
+        }
+
+        if (tim8_5s_count < 470)
+        {
+            LED_RED_LOW(); // 红灯灭
+        }
 
     default:
         break;
@@ -298,6 +329,31 @@ void app_LCD_Control(void)
         else
             lcd_mid_clear();
         break;
+
+    case Status_Low_Power:
+        com4 |= 1 << 4;
+        app_value_convert(); // 计算浓度值
+        if (tim8_1s_flag)//低电量图标
+            com5 |= ((1 << 2));
+        else
+            com5 &= ~((1 << 2));
+        // 5秒切换显示CO(PPM)和烟雾(dbm)
+        if (tim8_5s_flag)
+        {
+            com4 &= ~(1 << 10);
+            com5 &= ~(1 << 4);
+            com5 |= 1 << 15;
+            com5 |= 1 << 3;
+            lcd_show_mid_num(ppm_co);
+        }
+        else
+        {
+            com5 &= ~(1 << 15);
+            com5 &= ~(1 << 3);
+            com4 |= 1 << 10;
+            com5 |= 1 << 4;
+            lcd_show_mid_num(dbm_somke);
+        }
 
     default:
         break;

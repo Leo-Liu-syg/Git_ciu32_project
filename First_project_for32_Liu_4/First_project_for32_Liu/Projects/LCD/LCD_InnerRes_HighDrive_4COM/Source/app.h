@@ -11,9 +11,12 @@
 
 // 外部变量声明
 extern __IO uint32_t Get_CO_Voltage;     // ADC通道3 PA4采集的CO电压
+extern __IO uint32_t Get_VBat_Voltage;     // ADC通道2 PA3采集的电源电压
 extern __IO uint32_t Get_Smoke_Voltage;  // ADC通道1 PA2采集的烟雾电压
+
 extern __IO uint32_t Get_CO_Zero;        // CO传感器零点电压
 extern __IO uint32_t Get_Smoke_Zero;     // 烟雾传感器零点电压
+
 extern unsigned char Running_LCD_Flag;
 extern unsigned int  adc_co_calibration_value;
 extern unsigned char Running_LCD_counter; // LCD倒计时
@@ -25,7 +28,8 @@ typedef enum
     Status_SELF_CHECK,      // 系统自检状态（硬件/ADC/传感器检测）
     Status_CAL,             // 校准状态，校准完成后进入正常运行
     Status_RUNNING,         // 正常运行状态，实时采集、转换、显示
-    Status_ERROR            // 故障状态，自检/校准失败时进入
+    Status_ERROR,            // 故障状态，自检/校准失败时进入
+    Status_Low_Power
 } App_status;
 
 extern App_status Status;

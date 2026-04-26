@@ -26,28 +26,28 @@
 
 每完成一步上传一次git
 开发流程：
-//1. 用例程先确认可以烧录---done
-//2. 用gpio例程去控制灯----done
-//3. 参考timer例程，用timer例程实现一个定时器(可能是1ms)---done
-//4. 参考lcd例程，把屏幕全点亮--参考代码实现
-//5. 实现lcd接口函数---done
-// 5.1 全显示函数 lcd_show_all
-// 5.2 温度显示函数 lcd_show_temperature(uint8_t temperature, uint8_t celsius)
-// 5.3 中间显示函数 lcd_show_middle(uint16_t num, uint8_t point, uint8_t icon)
-// 5.4 湿度显示函数 lcd_show_humidity(uint8_t humidity)
-//5.5 其他功能函数
-//6. 实现语音播放函数 voice_play(uint8_t voice_id)---没有语音模块，暂时无法测试，先预留接口
-// 7. adc功能 参考adc例程 
-// 7.1 初始化函数 adc_init
-// 7.2 读取adc值函数 adc_read(uint8_t channel)
-// 7.3 读co电压函数 adc_read_co(void)
-// 7.4 读smoke电压函数 adc_read_smoke(void)
-7.5 读电池电压函数 adc_read_battery(void)
-8. 温湿度传感器功能
-8.1 读取温湿度传感器数据函数 dht_read_data(void) -> 设置两个全局变量 temperature 和 humidity
-8.2 读取温度接口函数 uint8_t dht_read_temperature(void) -> 返回温度值
-8.3 读取湿度接口函数 uint8_t dht_read_humidity(void) -> 返回湿度值
-9. 参考flash例程，实现flash功能
-// 9.1 读取flash数据函数 flash_read_data(uint8_t *data, uint16_t address, uint16_t length)
-// 9.2 写入flash数据函数 flash_write_data(uint8_t *data, uint16_t address, uint16_t length)
-10. app.c 主程序
+// //1. 用例程先确认可以烧录---done
+// //2. 用gpio例程去控制灯----done
+// //3. 参考timer例程，用timer例程实现一个定时器(可能是1ms)---done
+// //4. 参考lcd例程，把屏幕全点亮--参考代码实现
+// //5. 实现lcd接口函数---done
+// // 5.1 全显示函数 lcd_show_all
+// // 5.2 温度显示函数 lcd_show_temperature(uint8_t temperature, uint8_t celsius)
+// // 5.3 中间显示函数 lcd_show_middle(uint16_t num, uint8_t point, uint8_t icon)
+// // 5.4 湿度显示函数 lcd_show_humidity(uint8_t humidity)
+// //5.5 其他功能函数
+// //6. 实现语音播放函数 voice_play(uint8_t voice_id)---没有语音模块，暂时无法测试，先预留接口
+// // 7. adc功能 参考adc例程 
+// // 7.1 初始化函数 adc_init
+// // 7.2 读取adc值函数 adc_read(uint8_t channel)
+// // 7.3 读co电压函数 adc_read_co(void)
+// // 7.4 读smoke电压函数 adc_read_smoke(void)
+// 7.5 读电池电压函数 adc_read_battery(void)
+// 8. 温湿度传感器功能
+// // 8.1 读取温湿度传感器数据函数 dht_read_data(void) -> 设置两个全局变量 temperature 和 humidity
+// // 8.2 读取温度接口函数 uint8_t dht_read_temperature(void) -> 返回温度值
+// // 8.3 读取湿度接口函数 uint8_t dht_read_humidity(void) -> 返回湿度值
+// // 9. 参考flash例程，实现flash功能
+// // 9.1 读取flash数据函数 flash_read_data(uint8_t *data, uint16_t address, uint16_t length)
+// // 9.2 写入flash数据函数 flash_write_data(uint8_t *data, uint16_t address, uint16_t length)
+// 10. app.c 主程序
